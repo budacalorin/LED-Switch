@@ -20,6 +20,8 @@ class GameViewController: UIViewController {
                 // Set the scale mode to scale to fit the window
                 scene.scaleMode = .aspectFill
                 
+                scene.isUserInteractionEnabled = true
+                
                 // Present the scene
                 view.presentScene(scene)
             }
@@ -33,14 +35,6 @@ class GameViewController: UIViewController {
 
     override var shouldAutorotate: Bool {
         return true
-    }
-
-    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
-        if UIDevice.current.userInterfaceIdiom == .phone {
-            return .allButUpsideDown
-        } else {
-            return .all
-        }
     }
 
     override var prefersStatusBarHidden: Bool {
