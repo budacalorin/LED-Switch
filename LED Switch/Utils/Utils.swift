@@ -58,3 +58,30 @@ extension AVAudioPlayer {
         }
     }
 }
+
+extension UIImage {
+    static func gradientImage(withBounds: CGRect, startPoint: CGPoint, endPoint: CGPoint , colors: [CGColor]) -> UIImage {
+        // Configure the gradient layer based on input
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.frame = withBounds
+        gradientLayer.colors = colors
+        gradientLayer.startPoint = startPoint
+        gradientLayer.endPoint = endPoint
+        // Render the image using the gradient layer
+        UIGraphicsBeginImageContext(gradientLayer.bounds.size)
+        gradientLayer.render(in: UIGraphicsGetCurrentContext()!)
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        return image!
+    }
+}
+
+extension CGColor {
+    
+    static let red = CGColor(red: 1, green: 0, blue: 0, alpha: 1)
+    static let green = CGColor(red: 0, green: 1, blue: 0, alpha: 1)
+    static let blue = CGColor(red: 0, green: 0, blue: 1, alpha: 1)
+    static let black = CGColor(red: 0, green: 0, blue: 0, alpha: 1)
+    
+}

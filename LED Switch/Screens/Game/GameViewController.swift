@@ -37,6 +37,8 @@ class GameViewController: UIViewController {
             view.showsFPS = true
             view.showsNodeCount = true
         }
+        
+        setNeedsUpdateOfScreenEdgesDeferringSystemGestures()
     }
 
     override var shouldAutorotate: Bool {
@@ -45,5 +47,9 @@ class GameViewController: UIViewController {
 
     override var prefersStatusBarHidden: Bool {
         return true
+    }
+    
+    override var preferredScreenEdgesDeferringSystemGestures: UIRectEdge {
+        [.bottom]
     }
 }

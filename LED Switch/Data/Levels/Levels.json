@@ -11,9 +11,9 @@
             {
                 "seconds": 9.444557823129252,
                 "color": {
-                    "red": 1,
-                    "green": 1,
-                    "blue": 1
+                    "red": 0,
+                    "green": 0,
+                    "blue": 0
                 }
             },
             {
@@ -28,8 +28,8 @@
                 "seconds": 18.30371882086168,
                 "color": {
                     "red": 1,
-                    "green": 1,
-                    "blue": 1
+                    "green": 0,
+                    "blue": 0
                 }
             },
             {
@@ -37,22 +37,22 @@
                 "color": {
                     "red": 1,
                     "green": 1,
-                    "blue": 1
+                    "blue": 0
                 }
             },
             {
                 "seconds": 27.3075283446712,
                 "color": {
-                    "red": 1,
-                    "green": 1,
-                    "blue": 1
+                    "red": 0.5,
+                    "green": 0.5,
+                    "blue": 0.5
                 }
             },
             {
                 "seconds": 31.80639455782313,
                 "color": {
-                    "red": 1,
-                    "green": 1,
+                    "red": 0,
+                    "green": 0,
                     "blue": 1
                 }
             },
@@ -68,15 +68,15 @@
                 "seconds": 40.81390022675737,
                 "color": {
                     "red": 1,
-                    "green": 1,
-                    "blue": 1
+                    "green": 0,
+                    "blue": 0
                 }
             },
             {
                 "seconds": 45.3012925170068,
                 "color": {
                     "red": 1,
-                    "green": 1,
+                    "green": 0,
                     "blue": 1
                 }
             },
@@ -84,7 +84,7 @@
                 "seconds": 49.923424036281176,
                 "color": {
                     "red": 1,
-                    "green": 1,
+                    "green": 0.5,
                     "blue": 1
                 }
             },
@@ -92,8 +92,8 @@
                 "seconds": 54.55691609977324,
                 "color": {
                     "red": 1,
-                    "green": 1,
-                    "blue": 1
+                    "green": 0.5,
+                    "blue": 0
                 }
             },
             {

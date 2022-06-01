@@ -7,6 +7,7 @@
 
 import SpriteKit
 import GameplayKit
+import UIKit
 import AVFoundation
 
 class GameScene: SKScene {
@@ -14,18 +15,22 @@ class GameScene: SKScene {
     private var level: Level!
     private var player: AVAudioPlayer!
     
-    private var redSliderNode: SKSpriteNode!
-    private var greenSliderNode: SKSpriteNode!
-    private var blueSliderNode: SKSpriteNode!
-    private var redNode: SKSpriteNode!
-    private var greenNode: SKSpriteNode!
-    private var blueNode: SKSpriteNode!
+    private var redSliderNode: SKShapeNode!
+    private var greenSliderNode: SKShapeNode!
+    private var blueSliderNode: SKShapeNode!
+    private var redNode: SKShapeNode!
+    private var greenNode: SKShapeNode!
+    private var blueNode: SKShapeNode!
+    private var redNodeContainer: SKSpriteNode!
+    private var greenNodeContainer: SKSpriteNode!
+    private var blueNodeContainer: SKSpriteNode!
     private var backgroundNode: SKSpriteNode!
     private var playGameContainerNode: SKSpriteNode!
     private var overlayNode: SKNode!
     private var remainingTimeLabel: SKLabelNode!
     private var currentScoreLabel: SKLabelNode!
     private var developerRecordContainer: SKSpriteNode!
+    private var matchContainerNode: SKShapeNode!
     
     private var isPlaying = false
     private var matchColorDeadline: TimeInterval? {
@@ -44,18 +49,41 @@ class GameScene: SKScene {
     private var currentScore = 0
     
     override func didMove(to view: SKView) {
-        redSliderNode = (childNode(withName: "//RedSliderNode") as! SKSpriteNode)
-        greenSliderNode = (childNode(withName: "//GreenSliderNode") as! SKSpriteNode)
-        blueSliderNode = (childNode(withName: "//BlueSliderNode") as! SKSpriteNode)
-        redNode = (childNode(withName: "//RedNode") as! SKSpriteNode)
-        greenNode = (childNode(withName: "//GreenNode") as! SKSpriteNode)
-        blueNode = (childNode(withName: "//BlueNode") as! SKSpriteNode)
+        redSliderNode = (childNode(withName: "//RedSliderNode") as! SKShapeNode)
+        greenSliderNode = (childNode(withName: "//GreenSliderNode") as! SKShapeNode)
+        blueSliderNode = (childNode(withName: "//BlueSliderNode") as! SKShapeNode)
+        redNode = (childNode(withName: "//RedNode") as! SKShapeNode)
+        greenNode = (childNode(withName: "//GreenNode") as! SKShapeNode)
+        blueNode = (childNode(withName: "//BlueNode") as! SKShapeNode)
+        redNodeContainer = (childNode(withName: "//RedNodeContainer") as! SKSpriteNode)
+        greenNodeContainer = (childNode(withName: "//GreenNodeContainer") as! SKSpriteNode)
+        blueNodeContainer = (childNode(withName: "//BlueNodeContainer") as! SKSpriteNode)
         backgroundNode = (childNode(withName: "//BackgroundNode") as! SKSpriteNode)
         playGameContainerNode = (childNode(withName: "//PlayGameContainer") as! SKSpriteNode)
         currentScoreLabel = (childNode(withName: "//CurrentScoreLabel") as! SKLabelNode)
         remainingTimeLabel = (childNode(withName: "//RemainingTimeLabel") as! SKLabelNode)
         developerRecordContainer = ((childNode(withName: "//RecordContainer")) as! SKSpriteNode)
         overlayNode = childNode(withName: "//OverlayNode")!
+        matchContainerNode = (childNode(withName: "//MatchContainerNode") as! SKShapeNode)
+        
+        matchContainerNode.path = UIBezierPath(
+            roundedRect: CGRect(
+                x: -300,
+                y: -55,
+                width: 600,
+                height: 100
+            ),
+            cornerRadius: 10
+        ).cgPath
+        
+        [greenNode, blueNode, redNode].forEach(applyRoundedShape(toColor:))
+        [greenSliderNode, blueSliderNode, redSliderNode].forEach(applyRoundedShape(toSlider:))
+        [(redNode, .red), (greenNode, .green), (blueNode, .blue)].forEach(applyGradientTexture(node:startColor:))
+        
+        overlayNode.isHidden = false
+        
+//        addSwipeGestureRecognizer(to: view, direction: .up)
+//        addSwipeGestureRecognizer(to: view, direction: .down)
     }
     
     func configure(level: Level) -> Bool {
@@ -96,7 +124,7 @@ class GameScene: SKScene {
 extension GameScene {
     private func updateUI() {
         updateBackgroundColor()
-        updateRemainingTimeLabel()
+//        updateRemainingTimeLabel()
         updateCurrentScoreLabel()
     }
     
@@ -111,12 +139,39 @@ extension GameScene {
     }
     
     private func updateCurrentScoreLabel() {
-        currentScoreLabel.text = "\(currentScore)"
+        currentScoreLabel.text = "Score: \(currentScore)"
     }
     
     private func updateBackgroundColor() {
         backgroundNode.color = getCurrentSelectedColor()
     }
+}
+
+// MARK: - Swipes
+extension GameScene {
+    
+    @objc func handleSwipe(sender: UISwipeGestureRecognizer) {
+        let location = convertPoint(fromView: sender.location(in: view))
+        let touchedNodes = nodes(at: location)
+        let directionChanger: CGFloat = sender.direction == .down ? -1 : 1
+
+        if touchedNodes.contains(redNode) {
+            redSliderNode.position.y = directionChanger * redNode.frame.size.height/2
+        }
+        if touchedNodes.contains(greenNode) {
+            greenSliderNode.position.y = directionChanger * greenNode.frame.size.height/2
+        }
+        if touchedNodes.contains(blueNode) {
+            blueSliderNode.position.y = directionChanger * blueNode.frame.size.height/2
+        }
+    }
+    
+    private func addSwipeGestureRecognizer(to view: UIView, direction: UISwipeGestureRecognizer.Direction) {
+        let swipeRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipe(sender:)))
+        swipeRecognizer.direction = direction
+        view.addGestureRecognizer(swipeRecognizer)
+    }
+    
 }
 
 // MARK: - Touches
@@ -140,14 +195,14 @@ extension GameScene {
             guard !touchedNodes.contains(overlayNode) else {
                 return
             }
-            if touchedNodes.contains(redNode) {
-                redSliderNode.position.y = touch.location(in: redNode).y.cappedBy(-redNode.size.height/2, redNode.size.height/2)
+            if touchedNodes.contains(redNodeContainer) {
+                redSliderNode.position.y = touch.location(in: redNode).y.cappedBy(-redNode.frame.size.height/2, redNode.frame.size.height/2)
             }
-            if touchedNodes.contains(greenNode) {
-                greenSliderNode.position.y = touch.location(in: greenNode).y.cappedBy(-greenNode.size.height/2, greenNode.size.height/2)
+            if touchedNodes.contains(greenNodeContainer) {
+                greenSliderNode.position.y = touch.location(in: greenNode).y.cappedBy(-greenNode.frame.size.height/2, greenNode.frame.size.height/2)
             }
-            if touchedNodes.contains(blueNode) {
-                blueSliderNode.position.y = touch.location(in: blueNode).y.cappedBy(-blueNode.size.height/2, blueNode.size.height/2)
+            if touchedNodes.contains(blueNodeContainer) {
+                blueSliderNode.position.y = touch.location(in: blueNode).y.cappedBy(-blueNode.frame.size.height/2, blueNode.frame.size.height/2)
             }
             if touchedNodes.contains(developerRecordContainer) {
                 print(player.currentTime)
@@ -198,7 +253,9 @@ extension GameScene {
         let colorNode = SKShapeNode(rect: CGRect(x: -100, y: -100, width: 200, height: 200), cornerRadius: 20)
         colorNode.setScale(0.1)
         colorNode.fillColor = colorToMatch
-        colorNode.zPosition = 1
+        colorNode.strokeColor = .black
+        colorNode.lineWidth = 1
+        colorNode.zPosition = -1
         addChild(colorNode)
         
         colorNode.run(
@@ -260,5 +317,42 @@ extension GameScene {
 extension GameScene: AVAudioPlayerDelegate {
     func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
         stop()
+    }
+}
+
+// MARK: Rounded Sliders
+extension GameScene {
+    func applyRoundedShape(toColor shapeNode: SKShapeNode) {
+        shapeNode.path = UIBezierPath(
+            roundedRect: CGRect(
+                x: -50,
+                y: -100,
+                width: 100,
+                height: 200
+            ),
+            cornerRadius: 10
+        ).cgPath
+    }
+    
+    func applyRoundedShape(toSlider shapeNode: SKShapeNode) {
+        shapeNode.path = UIBezierPath(
+            roundedRect: CGRect(
+                x: -50,
+                y: -10,
+                width: 100,
+                height: 20
+            ),
+            cornerRadius: 5
+        ).cgPath
+    }
+    
+    func applyGradientTexture(node: SKShapeNode, startColor: CGColor) {
+        node.fillTexture = .init(
+            image: .gradientImage(
+                withBounds: greenNode.frame,
+                startPoint: CGPoint(x: 0.5, y: 0),
+                endPoint: CGPoint(x: 0.5, y: 1),
+                colors: [startColor, .black])
+        )
     }
 }
