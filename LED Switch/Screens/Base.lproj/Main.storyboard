@@ -75,7 +75,7 @@
                                     <outlet property="difficultyLabel" destination="SxI-Ys-Gdb" id="Pg8-Fa-5yO"/>
                                     <outlet property="titleLabel" destination="9dG-nN-yYv" id="yI0-7L-B3c"/>
                                     <outlet property="trackLabel" destination="kXQ-Dn-g3T" id="fyD-a9-Ohc"/>
-                                    <segue destination="BV1-FR-VrT" kind="show" id="Kuj-Tm-V7N"/>
+                                    <segue destination="BV1-FR-VrT" kind="presentation" modalPresentationStyle="fullScreen" id="Kuj-Tm-V7N"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -94,7 +94,7 @@
             <objects>
                 <viewController id="BV1-FR-VrT" customClass="GameViewController" customModule="LED_Switch" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="3se-qz-xqx" customClass="SKView">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="4qk-I5-YsI"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>

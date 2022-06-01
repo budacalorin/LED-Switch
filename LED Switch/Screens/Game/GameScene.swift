@@ -22,9 +22,9 @@ class GameScene: SKScene {
     private var blueNode: SKSpriteNode!
     private var backgroundNode: SKSpriteNode!
     private var playGameContainerNode: SKSpriteNode!
+    private var overlayNode: SKNode!
     private var remainingTimeLabel: SKLabelNode!
     private var currentScoreLabel: SKLabelNode!
-    private var colorToMatchNode: SKSpriteNode!
     private var developerRecordContainer: SKSpriteNode!
     
     private var isPlaying = false
@@ -54,8 +54,8 @@ class GameScene: SKScene {
         playGameContainerNode = (childNode(withName: "//PlayGameContainer") as! SKSpriteNode)
         currentScoreLabel = (childNode(withName: "//CurrentScoreLabel") as! SKLabelNode)
         remainingTimeLabel = (childNode(withName: "//RemainingTimeLabel") as! SKLabelNode)
-        colorToMatchNode = (childNode(withName: "//ColorToMatch") as! SKSpriteNode)
         developerRecordContainer = ((childNode(withName: "//RecordContainer")) as! SKSpriteNode)
+        overlayNode = childNode(withName: "//OverlayNode")!
     }
     
     func configure(level: Level) -> Bool {
@@ -71,7 +71,6 @@ class GameScene: SKScene {
         guard !level.colorTargets.isEmpty else {
             return false
         }
-        currentIndex = 0
         
         return true
     }
@@ -99,7 +98,6 @@ extension GameScene {
         updateBackgroundColor()
         updateRemainingTimeLabel()
         updateCurrentScoreLabel()
-        updateCurrentColorNode()
     }
     
     private func updateRemainingTimeLabel() {
@@ -119,13 +117,6 @@ extension GameScene {
     private func updateBackgroundColor() {
         backgroundNode.color = getCurrentSelectedColor()
     }
-    
-    private func updateCurrentColorNode() {
-        guard let colorToMatch = colorToMatch else {
-            return
-        }
-        colorToMatchNode.color = colorToMatch
-    }
 }
 
 // MARK: - Touches
@@ -142,6 +133,13 @@ extension GameScene {
         touches.forEach { touch in
             let location = touch.location(in: self)
             let touchedNodes = nodes(at: location)
+            
+            if touchedNodes.contains(playGameContainerNode) {
+                start()
+            }
+            guard !touchedNodes.contains(overlayNode) else {
+                return
+            }
             if touchedNodes.contains(redNode) {
                 redSliderNode.position.y = touch.location(in: redNode).y.cappedBy(-redNode.size.height/2, redNode.size.height/2)
             }
@@ -150,9 +148,6 @@ extension GameScene {
             }
             if touchedNodes.contains(blueNode) {
                 blueSliderNode.position.y = touch.location(in: blueNode).y.cappedBy(-blueNode.size.height/2, blueNode.size.height/2)
-            }
-            if touchedNodes.contains(playGameContainerNode) {
-                start()
             }
             if touchedNodes.contains(developerRecordContainer) {
                 print(player.currentTime)
@@ -165,16 +160,19 @@ extension GameScene {
 extension GameScene {
     private func start() {
         isPlaying = true
-        playGameContainerNode.isHidden = true
+        overlayNode.isHidden = true
         
         player.play()
         
         currentScore = 0
+        currentIndex = 0
+        
+        animateColorToMatchNode()
     }
     
     private func stop() {
         isPlaying = false
-        playGameContainerNode.isHidden = false
+        overlayNode.isHidden = false
     }
     
     private func increaseScore() {
@@ -187,22 +185,43 @@ extension GameScene {
             return
         }
         self.currentIndex = currentIndex + 1
+        
+        animateColorToMatchNode()
+    }
+    
+    private func animateColorToMatchNode() {
+        guard let deadline = matchColorDeadline, let colorToMatch = colorToMatch else {
+            return
+        }
+        let totalDuration = deadline - player.currentTime
+        
+        let colorNode = SKShapeNode(rect: CGRect(x: -100, y: -100, width: 200, height: 200), cornerRadius: 20)
+        colorNode.setScale(0.1)
+        colorNode.fillColor = colorToMatch
+        colorNode.zPosition = 1
+        addChild(colorNode)
+        
+        colorNode.run(
+            .group([
+                .scaleX(to: (size.width / 2) / 200, duration: totalDuration),
+                .scaleY(to: (size.height / 2) / 200, duration: totalDuration),
+                .sequence([
+                    .wait(forDuration: totalDuration),
+                    .group([
+                        .scaleX(to: size.width / 200, duration: 0.5),
+                        .scaleY(to: size.height / 200, duration: 0.5),
+                        .fadeOut(withDuration: 0.5)
+                    ]),
+                    .removeFromParent()
+                ])
+            ])
+        )
     }
 }
 
 
 // MARK: Colors {
 extension GameScene {
-//    private func generateNextColor() {
-//        let randomRed = CGFloat.random(in: 0..<1)
-//        let randomGreen = CGFloat.random(in: 0..<1)
-//        let randomBlue = CGFloat.random(in: 0..<1)
-//        let alpha = getAlphaFor(red: randomRed, green: randomGreen, blue: randomBlue)
-//
-//        colorToMatch = UIColor(displayP3Red: randomRed, green: randomGreen, blue: randomBlue, alpha: alpha)
-//        matchColorDeadline = Date.now.timeIntervalSince1970 + 100
-//    }
-//
     private func isCloseToColor() -> Bool {
         guard let colorToMatch = colorToMatch else {
             return false
