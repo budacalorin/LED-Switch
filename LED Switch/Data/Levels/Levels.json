@@ -1,0 +1,181 @@
+[
+    {
+        "id": "12345",
+        "name": "Tutorial",
+        "difficulty": "easy",
+        "track": {
+            "resource": "C418 - Minecraft",
+            "extension": "mp3"
+        },
+        "colorTargets": [
+            {
+                "seconds": 9.444557823129252,
+                "color": {
+                    "red": 1,
+                    "green": 1,
+                    "blue": 1
+                }
+            },
+            {
+                "seconds": 14.06421768707483,
+                "color": {
+                    "red": 1,
+                    "green": 1,
+                    "blue": 1
+                }
+            },
+            {
+                "seconds": 18.30371882086168,
+                "color": {
+                    "red": 1,
+                    "green": 1,
+                    "blue": 1
+                }
+            },
+            {
+                "seconds": 22.606054421768707,
+                "color": {
+                    "red": 1,
+                    "green": 1,
+                    "blue": 1
+                }
+            },
+            {
+                "seconds": 27.3075283446712,
+                "color": {
+                    "red": 1,
+                    "green": 1,
+                    "blue": 1
+                }
+            },
+            {
+                "seconds": 31.80639455782313,
+                "color": {
+                    "red": 1,
+                    "green": 1,
+                    "blue": 1
+                }
+            },
+            {
+                "seconds": 36.33614512471655,
+                "color": {
+                    "red": 1,
+                    "green": 1,
+                    "blue": 1
+                }
+            },
+            {
+                "seconds": 40.81390022675737,
+                "color": {
+                    "red": 1,
+                    "green": 1,
+                    "blue": 1
+                }
+            },
+            {
+                "seconds": 45.3012925170068,
+                "color": {
+                    "red": 1,
+                    "green": 1,
+                    "blue": 1
+                }
+            },
+            {
+                "seconds": 49.923424036281176,
+                "color": {
+                    "red": 1,
+                    "green": 1,
+                    "blue": 1
+                }
+            },
+            {
+                "seconds": 54.55691609977324,
+                "color": {
+                    "red": 1,
+                    "green": 1,
+                    "blue": 1
+                }
+            },
+            {
+                "seconds": 59.274308390022675,
+                "color": {
+                    "red": 1,
+                    "green": 1,
+                    "blue": 1
+                }
+            },
+            {
+                "seconds": 64.03,
+                "color": {
+                    "red": 1,
+                    "green": 1,
+                    "blue": 1
+                }
+            },
+            {
+                "seconds": 68.05938775510204,
+                "color": {
+                    "red": 1,
+                    "green": 1,
+                    "blue": 1
+                }
+            },
+            {
+                "seconds": 72.59918367346938,
+                "color": {
+                    "red": 1,
+                    "green": 1,
+                    "blue": 1
+                }
+            },
+            {
+                "seconds": 77.25061224489797,
+                "color": {
+                    "red": 1,
+                    "green": 1,
+                    "blue": 1
+                }
+            },
+            {
+                "seconds": 81.72020408163266,
+                "color": {
+                    "red": 1,
+                    "green": 1,
+                    "blue": 1
+                }
+            },
+            {
+                "seconds": 86.15145124716554,
+                "color": {
+                    "red": 1,
+                    "green": 1,
+                    "blue": 1
+                }
+            },
+            {
+                "seconds": 90.71986394557823,
+                "color": {
+                    "red": 1,
+                    "green": 1,
+                    "blue": 1
+                }
+            },
+            {
+                "seconds": 95.18083900226758,
+                "color": {
+                    "red": 1,
+                    "green": 1,
+                    "blue": 1
+                }
+            },
+            {
+                "seconds": 99.73517006802722,
+                "color": {
+                    "red": 1,
+                    "green": 1,
+                    "blue": 1
+                }
+            }
+        ]
+    }
+]

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Kac-g9-1m5">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Levels Collection View Controller-->
+        <scene sceneID="1jN-ff-GC9">
+            <objects>
+                <collectionViewController storyboardIdentifier="LevelsCollectionViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Kac-g9-1m5" customClass="LevelsCollectionViewController" customModule="LED_Switch" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="5Th-lB-yc8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="qkU-Do-JQy">
+                            <size key="itemSize" width="170" height="170"/>
+                            <size key="estimatedItemSize" width="170" height="170"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="8" minY="8" maxX="8" maxY="8"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="LevelCollectionViewCell" id="s3s-4A-8OG" customClass="LevelCollectionViewCell" customModule="LED_Switch" customModuleProvider="target">
+                                <rect key="frame" x="8" y="8" width="170" height="170"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="oSh-aj-hjo">
+                                    <rect key="frame" x="0.0" y="0.0" width="170" height="170"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Ah8-Rh-NjJ">
+                                            <rect key="frame" x="24" y="71.5" width="88.5" height="74.5"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="hps-nu-uLR">
+                                                    <rect key="frame" x="0.0" y="0.0" width="88.5" height="46"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9dG-nN-yYv">
+                                                            <rect key="frame" x="0.0" y="0.0" width="88.5" height="30"/>
+                                                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                                            <color key="textColor" systemColor="systemBackgroundColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dificulty" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SxI-Ys-Gdb" userLabel="Difficulty Label">
+                                                            <rect key="frame" x="0.0" y="30" width="88.5" height="16"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                            <color key="textColor" systemColor="systemBackgroundColor"/>
+                                                            <color key="highlightedColor" systemColor="secondaryLabelColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Track name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kXQ-Dn-g3T" userLabel="Track Label">
+                                                    <rect key="frame" x="0.0" y="54" width="88.5" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" systemColor="systemBackgroundColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </stackView>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                    <constraints>
+                                        <constraint firstItem="Ah8-Rh-NjJ" firstAttribute="leading" secondItem="oSh-aj-hjo" secondAttribute="leading" constant="24" id="9TC-MK-mRR"/>
+                                        <constraint firstItem="Ah8-Rh-NjJ" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="oSh-aj-hjo" secondAttribute="trailing" constant="-24" id="Hki-98-g7C"/>
+                                        <constraint firstItem="Ah8-Rh-NjJ" firstAttribute="bottom" secondItem="oSh-aj-hjo" secondAttribute="bottom" constant="-24" id="PMT-5T-iA4"/>
+                                        <constraint firstItem="Ah8-Rh-NjJ" firstAttribute="top" relation="greaterThanOrEqual" secondItem="oSh-aj-hjo" secondAttribute="top" constant="24" id="a7q-BM-j1f"/>
+                                    </constraints>
+                                </collectionViewCellContentView>
+                                <size key="customSize" width="170" height="170"/>
+                                <connections>
+                                    <outlet property="difficultyLabel" destination="SxI-Ys-Gdb" id="Pg8-Fa-5yO"/>
+                                    <outlet property="titleLabel" destination="9dG-nN-yYv" id="yI0-7L-B3c"/>
+                                    <outlet property="trackLabel" destination="kXQ-Dn-g3T" id="fyD-a9-Ohc"/>
+                                    <segue destination="BV1-FR-VrT" kind="show" id="Kuj-Tm-V7N"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="Kac-g9-1m5" id="uNi-4U-PEU"/>
+                            <outlet property="delegate" destination="Kac-g9-1m5" id="qGW-9d-q7z"/>
+                        </connections>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YNZ-7g-K1e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-242" y="-567"/>
+        </scene>
+        <!--Game View Controller-->
+        <scene sceneID="tXr-a1-R10">
+            <objects>
+                <viewController id="BV1-FR-VrT" customClass="GameViewController" customModule="LED_Switch" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="3se-qz-xqx" customClass="SKView">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="4qk-I5-YsI"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="QKF-aa-ZlR"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="519" y="-567"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
