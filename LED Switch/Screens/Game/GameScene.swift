@@ -9,6 +9,7 @@ import SpriteKit
 import GameplayKit
 import UIKit
 import AVFoundation
+import Combine
 
 class GameScene: SKScene {
     
@@ -25,12 +26,18 @@ class GameScene: SKScene {
     private var greenNodeContainer: SKSpriteNode!
     private var blueNodeContainer: SKSpriteNode!
     private var backgroundNode: SKSpriteNode!
-    private var playGameContainerNode: SKSpriteNode!
-    private var overlayNode: SKNode!
+    private var startGameContainerNode: SKShapeNode!
+    private var resumeGameContainerNode: SKShapeNode!
+    private var quitGameContainerNode: SKShapeNode!
+    private var startOverlayNode: SKNode!
+    private var pauseOverlayNode: SKNode!
     private var remainingTimeLabel: SKLabelNode!
     private var currentScoreLabel: SKLabelNode!
     private var developerRecordContainer: SKSpriteNode!
     private var matchContainerNode: SKShapeNode!
+    private var pauseLabel: SKLabelNode!
+    
+    let dismiss = PassthroughSubject<Void, Never>()
     
     private var isPlaying = false
     private var matchColorDeadline: TimeInterval? {
@@ -59,12 +66,16 @@ class GameScene: SKScene {
         greenNodeContainer = (childNode(withName: "//GreenNodeContainer") as! SKSpriteNode)
         blueNodeContainer = (childNode(withName: "//BlueNodeContainer") as! SKSpriteNode)
         backgroundNode = (childNode(withName: "//BackgroundNode") as! SKSpriteNode)
-        playGameContainerNode = (childNode(withName: "//PlayGameContainer") as! SKSpriteNode)
+        startGameContainerNode = (childNode(withName: "//StartGameContainer") as! SKShapeNode)
+        resumeGameContainerNode = (childNode(withName: "//ResumeGameContainer") as! SKShapeNode)
+        quitGameContainerNode = (childNode(withName: "//QuitGameContainer") as! SKShapeNode)
         currentScoreLabel = (childNode(withName: "//CurrentScoreLabel") as! SKLabelNode)
         remainingTimeLabel = (childNode(withName: "//RemainingTimeLabel") as! SKLabelNode)
         developerRecordContainer = ((childNode(withName: "//RecordContainer")) as! SKSpriteNode)
-        overlayNode = childNode(withName: "//OverlayNode")!
+        startOverlayNode = childNode(withName: "//StartOverlayNode")!
+        pauseOverlayNode = childNode(withName: "//PauseOverlayNode")!
         matchContainerNode = (childNode(withName: "//MatchContainerNode") as! SKShapeNode)
+        pauseLabel = (childNode(withName: "//PauseLabel") as! SKLabelNode)
         
         matchContainerNode.path = UIBezierPath(
             roundedRect: CGRect(
@@ -80,10 +91,13 @@ class GameScene: SKScene {
         [greenSliderNode, blueSliderNode, redSliderNode].forEach(applyRoundedShape(toSlider:))
         [(redNode, .red), (greenNode, .green), (blueNode, .blue)].forEach(applyGradientTexture(node:startColor:))
         
-        overlayNode.isHidden = false
+        [
+            (startGameContainerNode, 200),
+            (quitGameContainerNode, 180),
+            (resumeGameContainerNode, 350)
+        ].forEach(applyRoundedShape(toOption:width:))
         
-//        addSwipeGestureRecognizer(to: view, direction: .up)
-//        addSwipeGestureRecognizer(to: view, direction: .down)
+        startOverlayNode.isHidden = false
     }
     
     func configure(level: Level) -> Bool {
@@ -143,33 +157,6 @@ extension GameScene {
     }
 }
 
-// MARK: - Swipes
-extension GameScene {
-    
-    @objc func handleSwipe(sender: UISwipeGestureRecognizer) {
-        let location = convertPoint(fromView: sender.location(in: view))
-        let touchedNodes = nodes(at: location)
-        let directionChanger: CGFloat = sender.direction == .down ? -1 : 1
-
-        if touchedNodes.contains(redNode) {
-            redSliderNode.position.y = directionChanger * redNode.frame.size.height/2
-        }
-        if touchedNodes.contains(greenNode) {
-            greenSliderNode.position.y = directionChanger * greenNode.frame.size.height/2
-        }
-        if touchedNodes.contains(blueNode) {
-            blueSliderNode.position.y = directionChanger * blueNode.frame.size.height/2
-        }
-    }
-    
-    private func addSwipeGestureRecognizer(to view: UIView, direction: UISwipeGestureRecognizer.Direction) {
-        let swipeRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipe(sender:)))
-        swipeRecognizer.direction = direction
-        view.addGestureRecognizer(swipeRecognizer)
-    }
-    
-}
-
 // MARK: - Touches
 extension GameScene {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -185,11 +172,20 @@ extension GameScene {
             let location = touch.location(in: self)
             let touchedNodes = nodes(at: location)
             
-            if touchedNodes.contains(playGameContainerNode) {
+            if touchedNodes.contains(startGameContainerNode) {
                 start()
             }
-            guard !touchedNodes.contains(overlayNode) else {
+            if touchedNodes.contains(resumeGameContainerNode) {
+                resumeGame()
+            }
+            if touchedNodes.contains(quitGameContainerNode) {
+                quitGame()
+            }
+            guard !touchedNodes.contains(where: { $0 == startOverlayNode || $0 == pauseOverlayNode}) else {
                 return
+            }
+            if touchedNodes.contains(pauseLabel) {
+                pauseGame()
             }
             if touchedNodes.contains(redNodeContainer) {
                 redSliderNode.position.y = touch.location(in: redNode).y.cappedBy(-redNode.frame.size.height/2, redNode.frame.size.height/2)
@@ -221,7 +217,8 @@ extension GameScene {
 extension GameScene {
     private func start() {
         isPlaying = true
-        overlayNode.isHidden = true
+        startOverlayNode.isHidden = true
+        pauseOverlayNode.isHidden = true
         
         player.play()
         
@@ -235,7 +232,39 @@ extension GameScene {
     
     private func stop() {
         isPlaying = false
-        overlayNode.isHidden = false
+        startOverlayNode.isHidden = false
+        pauseOverlayNode.isHidden = true
+    }
+    
+    private func pauseGame() {
+        isPlaying = false
+        
+        player.pause()
+        pauseOverlayNode.isHidden = false
+        startOverlayNode.isHidden = true
+        
+        children
+            .filter { $0.name == Self.matchNodeName }
+            .forEach {
+                $0.removeFromParent()
+            }
+    }
+    
+    private func resumeGame() {
+        isPlaying = true
+        
+        player.play()
+        
+        startOverlayNode.isHidden = true
+        pauseOverlayNode.isHidden = true
+        
+        animateColorToMatchNode()
+    }
+    
+    private func quitGame() {
+        player.pause()
+        
+        dismiss.send()
     }
     
     private func increaseScore() {
@@ -252,6 +281,8 @@ extension GameScene {
         animateColorToMatchNode()
     }
     
+    private static let matchNodeName = "matchNodeName"
+    
     private func animateColorToMatchNode() {
         guard let deadline = matchColorDeadline, let colorToMatch = colorToMatch else {
             return
@@ -264,6 +295,7 @@ extension GameScene {
         colorNode.strokeColor = .black
         colorNode.lineWidth = 1
         colorNode.zPosition = -1
+        colorNode.name = Self.matchNodeName
         addChild(colorNode)
         
         colorNode.run(
@@ -353,6 +385,18 @@ extension GameScene {
                 height: 20
             ),
             cornerRadius: 5
+        ).cgPath
+    }
+    
+    func applyRoundedShape(toOption shapeNode: SKShapeNode, width: CGFloat) {
+        shapeNode.path = UIBezierPath(
+            roundedRect: CGRect(
+                x: -width / 2,
+                y: -50,
+                width: width,
+                height: 100
+            ),
+            cornerRadius: 10
         ).cgPath
     }
     

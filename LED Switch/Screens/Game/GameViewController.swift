@@ -5,6 +5,7 @@
 //  Created by Lorin Budaca on 11.04.2022.
 //
 
+import Combine
 import UIKit
 import SpriteKit
 import GameplayKit
@@ -12,6 +13,7 @@ import GameplayKit
 class GameViewController: UIViewController {
     
     var level: Level!
+    var cancellables = Set<AnyCancellable>()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +24,12 @@ class GameViewController: UIViewController {
                 guard scene.configure(level: level) else {
                     return
                 }
+                
+                scene.dismiss
+                    .sink { [weak self] in
+                        self?.dismiss(animated: true)
+                    }
+                    .store(in: &cancellables)
                 
                 // Set the scale mode to scale to fit the window
                 scene.scaleMode = .aspectFill
