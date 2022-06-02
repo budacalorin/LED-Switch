@@ -429,13 +429,2262 @@
     {
         "id": "3545243",
         "name": "Passion",
-        "difficulty": "easy",
+        "difficulty": "medium",
         "track": {
             "resource": "Mafia - For You",
             "extension": "mp3"
         },
         "colorTargets": [
-        
+            {
+                "seconds" : 4.9500000000000002,
+                "color" : {
+                    "blue" : 0,
+                    "red" : 0,
+                    "green" : 1
+                }
+            },
+            {
+                "seconds" : 9.6999999999999993,
+                "color" : {
+                    "blue" : 0.5,
+                    "red" : 1,
+                    "green" : 0
+                }
+            },
+            {
+                "seconds" : 14.5,
+                "color" : {
+                    "blue" : 0.5,
+                    "red" : 1,
+                    "green" : 0.5
+                }
+            },
+            {
+                "seconds" : 18.559999999999999,
+                "color" : {
+                    "blue" : 1,
+                    "red" : 1,
+                    "green" : 1
+                }
+            },
+            {
+                "seconds" : 19.199999999999999,
+                "color" : {
+                    "blue" : 1,
+                    "red" : 1,
+                    "green" : 1
+                }
+            },
+            {
+                "seconds" : 23.399999999999999,
+                "color" : {
+                    "blue" : 0.5,
+                    "red" : 0,
+                    "green" : 0
+                }
+            },
+            {
+                "seconds" : 23.800000000000001,
+                "color" : {
+                    "blue" : 0.5,
+                    "red" : 0,
+                    "green" : 0
+                }
+            },
+            {
+                "seconds" : 28.100000000000001,
+                "color" : {
+                    "blue" : 0,
+                    "red" : 1,
+                    "green" : 1
+                }
+            },
+            {
+                "seconds" : 28.768344671201813,
+                "color" : {
+                    "blue" : 0,
+                    "red" : 1,
+                    "green" : 1
+                }
+            },
+            {
+                "seconds" : 33.087823129251703,
+                "color" : {
+                    "blue" : 0,
+                    "red" : 0.5,
+                    "green" : 1
+                }
+            },
+            {
+                "seconds" : 33.479727891156465,
+                "color" : {
+                    "blue" : 0,
+                    "red" : 0.5,
+                    "green" : 1
+                }
+            },
+            {
+                "seconds" : 37.599546485260774,
+                "color" : {
+                    "blue" : 0,
+                    "red" : 0,
+                    "green" : 1
+                }
+            },
+            {
+                "seconds" : 38.10589569160998,
+                "color" : {
+                    "blue" : 0,
+                    "red" : 0,
+                    "green" : 1
+                }
+            },
+            {
+                "seconds" : 42.133219954648524,
+                "color" : {
+                    "blue" : 0.5,
+                    "red" : 1,
+                    "green" : 0.5
+                }
+            },
+            {
+                "seconds" : 42.662358276643992,
+                "color" : {
+                    "blue" : 0.5,
+                    "red" : 1,
+                    "green" : 0.5
+                }
+            },
+            {
+                "seconds" : 46.85192743764172,
+                "color" : {
+                    "blue" : 1,
+                    "red" : 0,
+                    "green" : 0.5
+                }
+            },
+            {
+                "seconds" : 47.301156462585034,
+                "color" : {
+                    "blue" : 1,
+                    "red" : 0,
+                    "green" : 0.5
+                }
+            },
+            {
+                "seconds" : 51.412653061224489,
+                "color" : {
+                    "blue" : 0,
+                    "red" : 1,
+                    "green" : 0.5
+                }
+            },
+            {
+                "seconds" : 51.869931972789118,
+                "color" : {
+                    "blue" : 0,
+                    "red" : 1,
+                    "green" : 0.5
+                }
+            },
+            {
+                "seconds" : 55.856938775510201,
+                "color" : {
+                    "blue" : 1,
+                    "red" : 0.5,
+                    "green" : 0.5
+                }
+            },
+            {
+                "seconds" : 56.29081632653061,
+                "color" : {
+                    "blue" : 1,
+                    "red" : 0.5,
+                    "green" : 0.5
+                }
+            },
+            {
+                "seconds" : 60.249795918367347,
+                "color" : {
+                    "blue" : 0,
+                    "red" : 0.5,
+                    "green" : 0
+                }
+            },
+            {
+                "seconds" : 60.725419501133786,
+                "color" : {
+                    "blue" : 0,
+                    "red" : 0.5,
+                    "green" : 0
+                }
+            },
+            {
+                "seconds" : 64.675804988662136,
+                "color" : {
+                    "blue" : 0.5,
+                    "red" : 1,
+                    "green" : 0.5
+                }
+            },
+            {
+                "seconds" : 65.093809523809526,
+                "color" : {
+                    "blue" : 0.5,
+                    "red" : 1,
+                    "green" : 0.5
+                }
+            },
+            {
+                "seconds" : 69.070657596371888,
+                "color" : {
+                    "blue" : 0.5,
+                    "red" : 0,
+                    "green" : 0
+                }
+            },
+            {
+                "seconds" : 69.46208616780045,
+                "color" : {
+                    "blue" : 0.5,
+                    "red" : 0,
+                    "green" : 0
+                }
+            },
+            {
+                "seconds" : 73.230113378684806,
+                "color" : {
+                    "red" : 0,
+                    "green" : 0,
+                    "blue" : 1
+                }
+            },
+            {
+                "seconds" : 73.682358276643996,
+                "color" : {
+                    "red" : 0,
+                    "green" : 0,
+                    "blue" : 1
+                }
+            },
+            {
+                "seconds" : 77.465804988662128,
+                "color" : {
+                    "blue" : 0,
+                    "green" : 0.5,
+                    "red" : 0
+                }
+            },
+            {
+                "seconds" : 77.931678004535144,
+                "color" : {
+                    "blue" : 0,
+                    "green" : 0.5,
+                    "red" : 0
+                }
+            },
+            {
+                "seconds" : 81.831972789115653,
+                "color" : {
+                    "red" : 1,
+                    "green" : 1,
+                    "blue" : 0.5
+                }
+            },
+            {
+                "seconds" : 82.227074829931979,
+                "color" : {
+                    "red" : 1,
+                    "green" : 1,
+                    "blue" : 0.5
+                }
+            },
+            {
+                "seconds" : 86.077913832199542,
+                "color" : {
+                    "red" : 1,
+                    "green" : 0.5,
+                    "blue" : 1
+                }
+            },
+            {
+                "seconds" : 86.517369614512475,
+                "color" : {
+                    "red" : 1,
+                    "green" : 0.5,
+                    "blue" : 1
+                }
+            },
+            {
+                "seconds" : 90.221337868480731,
+                "color" : {
+                    "red" : 0,
+                    "green" : 0.5,
+                    "blue" : 0.5
+                }
+            },
+            {
+                "seconds" : 90.638208616780048,
+                "color" : {
+                    "red" : 0,
+                    "green" : 0.5,
+                    "blue" : 0.5
+                }
+            },
+            {
+                "seconds" : 94.599999999999994,
+                "color" : {
+                    "blue" : 1,
+                    "green" : 1,
+                    "red" : 0.5
+                }
+            },
+            {
+                "seconds" : 98.700000000000003,
+                "color" : {
+                    "red" : 0,
+                    "green" : 0,
+                    "blue" : 0.5
+                }
+            },
+            {
+                "seconds" : 102.7,
+                "color" : {
+                    "blue" : 0,
+                    "green" : 0,
+                    "red" : 1
+                }
+            },
+            {
+                "seconds" : 106.40000000000001,
+                "color" : {
+                    "blue" : 0,
+                    "green" : 1,
+                    "red" : 1
+                }
+            },
+            {
+                "seconds" : 110.61614512471655,
+                "color" : {
+                    "red" : 0,
+                    "green" : 0,
+                    "blue" : 0.5
+                }
+            },
+            {
+                "seconds" : 114.56628117913833,
+                "color" : {
+                    "red" : 0,
+                    "green" : 0.5,
+                    "blue" : 0
+                }
+            },
+            {
+                "seconds" : 118.4830612244898,
+                "color" : {
+                    "blue" : 0,
+                    "red" : 1,
+                    "green" : 1
+                }
+            },
+            {
+                "seconds" : 121.91952380952381,
+                "color" : {
+                    "blue" : 1,
+                    "red" : 0,
+                    "green" : 1
+                }
+            },
+            {
+                "seconds" : 122.37172335600907,
+                "color" : {
+                    "blue" : 1,
+                    "red" : 0,
+                    "green" : 1
+                }
+            },
+            {
+                "seconds" : 125.88732426303855,
+                "color" : {
+                    "blue" : 0.5,
+                    "red" : 0,
+                    "green" : 0
+                }
+            },
+            {
+                "seconds" : 126.30777777777777,
+                "color" : {
+                    "blue" : 0.5,
+                    "red" : 0,
+                    "green" : 0
+                }
+            },
+            {
+                "seconds" : 129.7721768707483,
+                "color" : {
+                    "blue" : 0.5,
+                    "red" : 0,
+                    "green" : 0
+                }
+            },
+            {
+                "seconds" : 130.18671201814058,
+                "color" : {
+                    "blue" : 0.5,
+                    "red" : 0,
+                    "green" : 0
+                }
+            },
+            {
+                "seconds" : 133.82453514739228,
+                "color" : {
+                    "blue" : 1,
+                    "red" : 0,
+                    "green" : 1
+                }
+            },
+            {
+                "seconds" : 134.20891156462585,
+                "color" : {
+                    "blue" : 1,
+                    "red" : 0,
+                    "green" : 1
+                }
+            },
+            {
+                "seconds" : 137.71149659863946,
+                "color" : {
+                    "blue" : 0,
+                    "red" : 1,
+                    "green" : 1
+                }
+            },
+            {
+                "seconds" : 138.14802721088435,
+                "color" : {
+                    "blue" : 0,
+                    "red" : 1,
+                    "green" : 1
+                }
+            },
+            {
+                "seconds" : 141.63925170068026,
+                "color" : {
+                    "blue" : 0,
+                    "red" : 0,
+                    "green" : 0.5
+                }
+            },
+            {
+                "seconds" : 142.0769387755102,
+                "color" : {
+                    "blue" : 0,
+                    "red" : 0,
+                    "green" : 0.5
+                }
+            },
+            {
+                "seconds" : 145.63238095238094,
+                "color" : {
+                    "blue" : 0.5,
+                    "red" : 0,
+                    "green" : 0.5
+                }
+            },
+            {
+                "seconds" : 146.06442176870749,
+                "color" : {
+                    "blue" : 0.5,
+                    "red" : 0,
+                    "green" : 0.5
+                }
+            },
+            {
+                "seconds" : 149.53444444444443,
+                "color" : {
+                    "blue" : 1,
+                    "red" : 0.5,
+                    "green" : 0
+                }
+            },
+            {
+                "seconds" : 149.9489342403628,
+                "color" : {
+                    "blue" : 1,
+                    "red" : 0.5,
+                    "green" : 0
+                }
+            },
+            {
+                "seconds" : 153.4667573696145,
+                "color" : {
+                    "blue" : 1,
+                    "red" : 0.5,
+                    "green" : 1
+                }
+            },
+            {
+                "seconds" : 153.91494331065761,
+                "color" : {
+                    "blue" : 1,
+                    "red" : 0.5,
+                    "green" : 1
+                }
+            },
+            {
+                "seconds" : 157.39580498866212,
+                "color" : {
+                    "blue" : 1,
+                    "red" : 1,
+                    "green" : 0.5
+                }
+            },
+            {
+                "seconds" : 157.8522448979592,
+                "color" : {
+                    "blue" : 1,
+                    "red" : 1,
+                    "green" : 0.5
+                }
+            },
+            {
+                "seconds" : 161.31943310657596,
+                "color" : {
+                    "blue" : 0.5,
+                    "red" : 0.5,
+                    "green" : 1
+                }
+            },
+            {
+                "seconds" : 161.80301587301588,
+                "color" : {
+                    "blue" : 0.5,
+                    "red" : 0.5,
+                    "green" : 1
+                }
+            },
+            {
+                "seconds" : 165.30671201814059,
+                "color" : {
+                    "blue" : 0.5,
+                    "red" : 0,
+                    "green" : 1
+                }
+            },
+            {
+                "seconds" : 165.75469387755103,
+                "color" : {
+                    "blue" : 0.5,
+                    "red" : 0,
+                    "green" : 1
+                }
+            },
+            {
+                "seconds" : 169.17612244897958,
+                "color" : {
+                    "blue" : 1,
+                    "red" : 0,
+                    "green" : 1
+                }
+            },
+            {
+                "seconds" : 169.66006802721088,
+                "color" : {
+                    "blue" : 1,
+                    "red" : 0,
+                    "green" : 1
+                }
+            },
+            {
+                "seconds" : 173.22780045351473,
+                "color" : {
+                    "blue" : 1,
+                    "red" : 0.5,
+                    "green" : 1
+                }
+            },
+            {
+                "seconds" : 173.66088435374149,
+                "color" : {
+                    "blue" : 1,
+                    "red" : 0.5,
+                    "green" : 1
+                }
+            },
+            {
+                "seconds" : 177.03104308390022,
+                "color" : {
+                    "blue" : 0,
+                    "red" : 0.5,
+                    "green" : 1
+                }
+            },
+            {
+                "seconds" : 177.48131519274375,
+                "color" : {
+                    "blue" : 0,
+                    "red" : 0.5,
+                    "green" : 1
+                }
+            },
+            {
+                "seconds" : 180.96551020408162,
+                "color" : {
+                    "blue" : 0,
+                    "red" : 1,
+                    "green" : 0
+                }
+            },
+            {
+                "seconds" : 181.44557823129253,
+                "color" : {
+                    "blue" : 0,
+                    "red" : 1,
+                    "green" : 0
+                }
+            },
+            {
+                "seconds" : 184.93115646258502,
+                "color" : {
+                    "blue" : 0,
+                    "red" : 0.5,
+                    "green" : 0
+                }
+            },
+            {
+                "seconds" : 185.41437641723357,
+                "color" : {
+                    "blue" : 0,
+                    "red" : 0.5,
+                    "green" : 0
+                }
+            },
+            {
+                "seconds" : 188.85163265306122,
+                "color" : {
+                    "blue" : 0.5,
+                    "red" : 0.5,
+                    "green" : 0
+                }
+            },
+            {
+                "seconds" : 189.35376417233559,
+                "color" : {
+                    "blue" : 0.5,
+                    "red" : 0.5,
+                    "green" : 0
+                }
+            },
+            {
+                "seconds" : 192.79687074829931,
+                "color" : {
+                    "blue" : 0,
+                    "red" : 0.5,
+                    "green" : 0
+                }
+            },
+            {
+                "seconds" : 193.2710657596372,
+                "color" : {
+                    "blue" : 0,
+                    "red" : 0.5,
+                    "green" : 0
+                }
+            },
+            {
+                "seconds" : 196.73648526077096,
+                "color" : {
+                    "blue" : 0.5,
+                    "red" : 0,
+                    "green" : 1
+                }
+            },
+            {
+                "seconds" : 197.17233560090702,
+                "color" : {
+                    "blue" : 0.5,
+                    "red" : 0,
+                    "green" : 1
+                }
+            },
+            {
+                "seconds" : 200.72045351473923,
+                "color" : {
+                    "blue" : 0,
+                    "red" : 0,
+                    "green" : 1
+                }
+            },
+            {
+                "seconds" : 201.17476190476191,
+                "color" : {
+                    "blue" : 0,
+                    "red" : 0,
+                    "green" : 1
+                }
+            },
+            {
+                "seconds" : 205.34616780045351,
+                "color" : {
+                    "blue" : 0,
+                    "red" : 1,
+                    "green" : 0
+                }
+            },
+            {
+                "seconds" : 208.80000000000001,
+                "color" : {
+                    "blue" : 0.5,
+                    "red" : 1,
+                    "green" : 0.5
+                }
+            },
+            {
+                "seconds" : 213.21478458049887,
+                "color" : {
+                    "blue" : 0.5,
+                    "red" : 0,
+                    "green" : 0
+                }
+            },
+            {
+                "seconds" : 217.16689342403629,
+                "color" : {
+                    "blue" : 0.5,
+                    "red" : 1,
+                    "green" : 0
+                }
+            },
+            {
+                "seconds" : 220.91467120181406,
+                "color" : {
+                    "blue" : 0,
+                    "red" : 0,
+                    "green" : 0.5
+                }
+            },
+            {
+                "seconds" : 224.30000000000001,
+                "color" : {
+                    "blue" : 1,
+                    "red" : 0.5,
+                    "green" : 1
+                }
+            },
+            {
+                "seconds" : 228.82256235827666,
+                "color" : {
+                    "blue" : 1,
+                    "red" : 0,
+                    "green" : 0.5
+                }
+            },
+            {
+                "seconds" : 232.32297052154195,
+                "color" : {
+                    "blue" : 0.5,
+                    "red" : 0,
+                    "green" : 1
+                }
+            },
+            {
+                "seconds" : 249.59999999999999,
+                "color" : {
+                    "blue" : 0.5,
+                    "red" : 1,
+                    "green" : 0.5
+                }
+            },
+            {
+                "seconds" : 240.40000000000001,
+                "color" : {
+                    "blue" : 0.5,
+                    "red" : 1,
+                    "green" : 0.5
+                }
+            },
+            {
+                "seconds" : 243.94748299319727,
+                "color" : {
+                    "blue" : 0.5,
+                    "red" : 0.5,
+                    "green" : 0
+                }
+            },
+            {
+                "seconds" : 244.44292517006804,
+                "color" : {
+                    "blue" : 0.5,
+                    "red" : 0.5,
+                    "green" : 0
+                }
+            },
+            {
+                "seconds" : 247.83916099773242,
+                "color" : {
+                    "blue" : 0,
+                    "red" : 0,
+                    "green" : 1
+                }
+            },
+            {
+                "seconds" : 248.31192743764171,
+                "color" : {
+                    "blue" : 0,
+                    "red" : 0,
+                    "green" : 1
+                }
+            },
+            {
+                "seconds" : 255.78356009070293,
+                "color" : {
+                    "blue" : 1,
+                    "red" : 0.5,
+                    "green" : 0
+                }
+            },
+            {
+                "seconds" : 256.24439909297053,
+                "color" : {
+                    "blue" : 1,
+                    "red" : 0.5,
+                    "green" : 0
+                }
+            },
+            {
+                "seconds" : 259.6680498866213,
+                "color" : {
+                    "blue" : 0,
+                    "red" : 0,
+                    "green" : 0
+                }
+            },
+            {
+                "seconds" : 260.13634920634922,
+                "color" : {
+                    "blue" : 0,
+                    "red" : 0,
+                    "green" : 0
+                }
+            },
+            {
+                "seconds" : 263.58548752834469,
+                "color" : {
+                    "blue" : 0,
+                    "red" : 0,
+                    "green" : 0.5
+                }
+            },
+            {
+                "seconds" : 264.03968253968253,
+                "color" : {
+                    "blue" : 0,
+                    "red" : 0,
+                    "green" : 0.5
+                }
+            },
+            {
+                "seconds" : 271.48401360544216,
+                "color" : {
+                    "blue" : 0.5,
+                    "red" : 0.5,
+                    "green" : 0
+                }
+            },
+            {
+                "seconds" : 271.97675736961452,
+                "color" : {
+                    "blue" : 0.5,
+                    "red" : 0.5,
+                    "green" : 0
+                }
+            },
+            {
+                "seconds" : 275.39575963718823,
+                "color" : {
+                    "blue" : 0,
+                    "red" : 1,
+                    "green" : 1
+                }
+            },
+            {
+                "seconds" : 275.87403628117914,
+                "color" : {
+                    "blue" : 0,
+                    "red" : 1,
+                    "green" : 1
+                }
+            },
+            {
+                "seconds" : 279.31312925170067,
+                "color" : {
+                    "blue" : 0.5,
+                    "red" : 1,
+                    "green" : 0
+                }
+            },
+            {
+                "seconds" : 279.83798185941043,
+                "color" : {
+                    "blue" : 0.5,
+                    "red" : 1,
+                    "green" : 0
+                }
+            },
+            {
+                "seconds" : 283.31303854875284,
+                "color" : {
+                    "blue" : 0.5,
+                    "red" : 0,
+                    "green" : 1
+                }
+            },
+            {
+                "seconds" : 283.7788662131519,
+                "color" : {
+                    "blue" : 0.5,
+                    "red" : 0,
+                    "green" : 1
+                }
+            },
+            {
+                "seconds" : 287.19750566893424,
+                "color" : {
+                    "blue" : 0.5,
+                    "red" : 0.5,
+                    "green" : 1
+                }
+            },
+            {
+                "seconds" : 287.69678004535149,
+                "color" : {
+                    "blue" : 0.5,
+                    "red" : 0.5,
+                    "green" : 1
+                }
+            },
+            {
+                "seconds" : 291.11961451247163,
+                "color" : {
+                    "blue" : 0,
+                    "red" : 0,
+                    "green" : 0
+                }
+            },
+            {
+                "seconds" : 291.59886621315195,
+                "color" : {
+                    "blue" : 0,
+                    "red" : 0,
+                    "green" : 0
+                }
+            },
+            {
+                "seconds" : 295.10070294784583,
+                "color" : {
+                    "blue" : 0,
+                    "red" : 0.5,
+                    "green" : 0
+                }
+            },
+            {
+                "seconds" : 295.60129251700681,
+                "color" : {
+                    "blue" : 0,
+                    "red" : 0.5,
+                    "green" : 0
+                }
+            },
+            {
+                "seconds" : 298.98768707482992,
+                "color" : {
+                    "blue" : 0,
+                    "red" : 0,
+                    "green" : 1
+                }
+            },
+            {
+                "seconds" : 299.46968253968254,
+                "color" : {
+                    "blue" : 0,
+                    "red" : 0,
+                    "green" : 1
+                }
+            },
+            {
+                "seconds" : 302.9561904761905,
+                "color" : {
+                    "blue" : 0,
+                    "red" : 0.5,
+                    "green" : 0.5
+                }
+            },
+            {
+                "seconds" : 303.45557823129252,
+                "color" : {
+                    "blue" : 0,
+                    "red" : 0.5,
+                    "green" : 0.5
+                }
+            }
+        ]
+    },
+    {
+        "id": "30985670",
+        "name": "Aye",
+        "difficulty": "hard",
+        "track": {
+            "resource": "He is a Pirate",
+            "extension": "mp3"
+        },
+        "colorTargets": [
+            {
+                "seconds" : 3.3398333333333334,
+                "color" : {
+                    "red" : 1,
+                    "green" : 1,
+                    "blue" : 0.5
+                }
+            },
+            {
+                "seconds" : 5.1067916666666671,
+                "color" : {
+                    "blue" : 0.5,
+                    "green" : 1,
+                    "red" : 0
+                }
+            },
+            {
+                "seconds" : 6.758,
+                "color" : {
+                    "red" : 0.5,
+                    "green" : 1,
+                    "blue" : 1
+                }
+            },
+            {
+                "seconds" : 8.5068750000000009,
+                "color" : {
+                    "blue" : 0,
+                    "green" : 1,
+                    "red" : 1
+                }
+            },
+            {
+                "seconds" : 10.172229166666666,
+                "color" : {
+                    "red" : 0,
+                    "green" : 0,
+                    "blue" : 1
+                }
+            },
+            {
+                "seconds" : 11.956854166666666,
+                "color" : {
+                    "red" : 1,
+                    "green" : 0,
+                    "blue" : 1
+                }
+            },
+            {
+                "seconds" : 13.624333333333333,
+                "color" : {
+                    "blue" : 0.5,
+                    "green" : 0,
+                    "red" : 0.5
+                }
+            },
+            {
+                "seconds" : 15.358395833333333,
+                "color" : {
+                    "red" : 0.5,
+                    "green" : 1,
+                    "blue" : 0
+                }
+            },
+            {
+                "seconds" : 17.007895833333333,
+                "color" : {
+                    "red" : 0,
+                    "green" : 1,
+                    "blue" : 0.5
+                }
+            },
+            {
+                "seconds" : 18.739145833333332,
+                "color" : {
+                    "red" : 0.5,
+                    "green" : 0.5,
+                    "blue" : 0
+                }
+            },
+            {
+                "seconds" : 20.372812499999998,
+                "color" : {
+                    "red" : 0.5,
+                    "green" : 0.5,
+                    "blue" : 0
+                }
+            },
+            {
+                "seconds" : 22.090854166666666,
+                "color" : {
+                    "red" : 0,
+                    "green" : 0,
+                    "blue" : 0.5
+                }
+            },
+            {
+                "seconds" : 23.806062499999999,
+                "color" : {
+                    "red" : 0,
+                    "green" : 1,
+                    "blue" : 0.5
+                }
+            },
+            {
+                "seconds" : 25.50675,
+                "color" : {
+                    "blue" : 0,
+                    "green" : 1,
+                    "red" : 1
+                }
+            },
+            {
+                "seconds" : 27.259604166666666,
+                "color" : {
+                    "blue" : 0,
+                    "red" : 0,
+                    "green" : 0
+                }
+            },
+            {
+                "seconds" : 28.942645833333334,
+                "color" : {
+                    "blue" : 1,
+                    "red" : 1,
+                    "green" : 0.5
+                }
+            },
+            {
+                "seconds" : 30.67625,
+                "color" : {
+                    "blue" : 0.5,
+                    "red" : 0,
+                    "green" : 0.5
+                }
+            },
+            {
+                "seconds" : 33.241708333333335,
+                "color" : {
+                    "red" : 0,
+                    "green" : 0,
+                    "blue" : 1
+                }
+            },
+            {
+                "seconds" : 33.910125000000001,
+                "color" : {
+                    "blue" : 1,
+                    "green" : 1,
+                    "red" : 0.5
+                }
+            },
+            {
+                "seconds" : 34.156916666666667,
+                "color" : {
+                    "blue" : 1,
+                    "green" : 1,
+                    "red" : 0.5
+                }
+            },
+            {
+                "seconds" : 34.907666666666664,
+                "color" : {
+                    "red" : 0.5,
+                    "green" : 0,
+                    "blue" : 0.5
+                }
+            },
+            {
+                "seconds" : 35.559229166666668,
+                "color" : {
+                    "red" : 1,
+                    "green" : 1,
+                    "blue" : 0
+                }
+            },
+            {
+                "seconds" : 35.808479166666665,
+                "color" : {
+                    "red" : 1,
+                    "green" : 1,
+                    "blue" : 0
+                }
+            },
+            {
+                "seconds" : 38.323854166666663,
+                "color" : {
+                    "blue" : 1,
+                    "red" : 1,
+                    "green" : 1
+                }
+            },
+            {
+                "seconds" : 38.588895833333332,
+                "color" : {
+                    "blue" : 1,
+                    "red" : 1,
+                    "green" : 1
+                }
+            },
+            {
+                "seconds" : 38.856937500000001,
+                "color" : {
+                    "blue" : 1,
+                    "red" : 1,
+                    "green" : 1
+                }
+            },
+            {
+                "seconds" : 39.310437499999999,
+                "color" : {
+                    "blue" : 1,
+                    "red" : 1,
+                    "green" : 1
+                }
+            },
+            {
+                "seconds" : 39.473645833333336,
+                "color" : {
+                    "blue" : 1,
+                    "red" : 1,
+                    "green" : 1
+                }
+            },
+            {
+                "seconds" : 39.989229166666668,
+                "color" : {
+                    "blue" : 0,
+                    "red" : 0,
+                    "green" : 0.5
+                }
+            },
+            {
+                "seconds" : 40.257416666666664,
+                "color" : {
+                    "blue" : 0,
+                    "red" : 0,
+                    "green" : 0.5
+                }
+            },
+            {
+                "seconds" : 40.642854166666666,
+                "color" : {
+                    "blue" : 0,
+                    "red" : 0,
+                    "green" : 0.5
+                }
+            },
+            {
+                "seconds" : 40.92189583333333,
+                "color" : {
+                    "blue" : 0,
+                    "red" : 0,
+                    "green" : 0.5
+                }
+            },
+            {
+                "seconds" : 41.074020833333336,
+                "color" : {
+                    "blue" : 0,
+                    "red" : 0,
+                    "green" : 0.5
+                }
+            },
+            {
+                "seconds" : 41.693395833333334,
+                "color" : {
+                    "red" : 0,
+                    "green" : 0.5,
+                    "blue" : 0.5
+                }
+            },
+            {
+                "seconds" : 42.022500000000001,
+                "color" : {
+                    "red" : 0,
+                    "green" : 0.5,
+                    "blue" : 0.5
+                }
+            },
+            {
+                "seconds" : 42.289416666666668,
+                "color" : {
+                    "red" : 0,
+                    "green" : 0.5,
+                    "blue" : 0.5
+                }
+            },
+            {
+                "seconds" : 42.622666666666667,
+                "color" : {
+                    "red" : 0,
+                    "green" : 0.5,
+                    "blue" : 0.5
+                }
+            },
+            {
+                "seconds" : 42.755645833333332,
+                "color" : {
+                    "red" : 0,
+                    "green" : 0.5,
+                    "blue" : 0.5
+                }
+            },
+            {
+                "seconds" : 43.607104166666666,
+                "color" : {
+                    "red" : 0,
+                    "green" : 1,
+                    "blue" : 1
+                }
+            },
+            {
+                "seconds" : 43.789958333333331,
+                "color" : {
+                    "red" : 0,
+                    "green" : 1,
+                    "blue" : 1
+                }
+            },
+            {
+                "seconds" : 44.140749999999997,
+                "color" : {
+                    "red" : 0,
+                    "green" : 1,
+                    "blue" : 1
+                }
+            },
+            {
+                "seconds" : 44.355916666666666,
+                "color" : {
+                    "red" : 0,
+                    "green" : 1,
+                    "blue" : 1
+                }
+            },
+            {
+                "seconds" : 46.810625000000002,
+                "color" : {
+                    "blue" : 0,
+                    "green" : 1,
+                    "red" : 1
+                }
+            },
+            {
+                "seconds" : 48.577541666666669,
+                "color" : {
+                    "blue" : 0.5,
+                    "green" : 0.5,
+                    "red" : 0
+                }
+            },
+            {
+                "seconds" : 50.274374999999999,
+                "color" : {
+                    "blue" : 1,
+                    "red" : 1,
+                    "green" : 0.5
+                }
+            },
+            {
+                "seconds" : 50.774270833333333,
+                "color" : {
+                    "blue" : 1,
+                    "red" : 1,
+                    "green" : 0.5
+                }
+            },
+            {
+                "seconds" : 50.892479166666668,
+                "color" : {
+                    "blue" : 1,
+                    "red" : 1,
+                    "green" : 0.5
+                }
+            },
+            {
+                "seconds" : 51.1418125,
+                "color" : {
+                    "blue" : 1,
+                    "red" : 1,
+                    "green" : 0.5
+                }
+            },
+            {
+                "seconds" : 54.58,
+                "color" : {
+                    "red" : 1,
+                    "green" : 1,
+                    "blue" : 1
+                }
+            },
+            {
+                "seconds" : 57.841416666666667,
+                "color" : {
+                    "red" : 0.5,
+                    "blue" : 1,
+                    "green" : 1
+                }
+            },
+            {
+                "seconds" : 58.789770833333336,
+                "color" : {
+                    "blue" : 0.5,
+                    "green" : 0,
+                    "red" : 0
+                }
+            },
+            {
+                "seconds" : 59.589645833333336,
+                "color" : {
+                    "blue" : 1,
+                    "red" : 0.5,
+                    "green" : 0
+                }
+            },
+            {
+                "seconds" : 60.589354166666666,
+                "color" : {
+                    "blue" : 0.5,
+                    "green" : 0.5,
+                    "red" : 0.5
+                }
+            },
+            {
+                "seconds" : 60.889583333333334,
+                "color" : {
+                    "blue" : 0.5,
+                    "green" : 0.5,
+                    "red" : 0.5
+                }
+            },
+            {
+                "seconds" : 61.209520833333336,
+                "color" : {
+                    "blue" : 0.5,
+                    "green" : 0.5,
+                    "red" : 0.5
+                }
+            },
+            {
+                "seconds" : 61.456625000000003,
+                "color" : {
+                    "blue" : 0.5,
+                    "green" : 0.5,
+                    "red" : 0.5
+                }
+            },
+            {
+                "seconds" : 61.722666666666669,
+                "color" : {
+                    "blue" : 0.5,
+                    "green" : 0.5,
+                    "red" : 0.5
+                }
+            },
+            {
+                "seconds" : 62.240458333333336,
+                "color" : {
+                    "blue" : 0.5,
+                    "green" : 0.5,
+                    "red" : 1
+                }
+            },
+            {
+                "seconds" : 63.04141666666667,
+                "color" : {
+                    "red" : 1,
+                    "blue" : 1,
+                    "green" : 0.5
+                }
+            },
+            {
+                "seconds" : 63.840312500000003,
+                "color" : {
+                    "red" : 0,
+                    "green" : 0,
+                    "blue" : 0
+                }
+            },
+            {
+                "seconds" : 64.175583333333336,
+                "color" : {
+                    "red" : 0,
+                    "green" : 0,
+                    "blue" : 0
+                }
+            },
+            {
+                "seconds" : 64.490250000000003,
+                "color" : {
+                    "red" : 0,
+                    "green" : 0,
+                    "blue" : 0
+                }
+            },
+            {
+                "seconds" : 64.775541666666669,
+                "color" : {
+                    "red" : 0,
+                    "green" : 0,
+                    "blue" : 0
+                }
+            },
+            {
+                "seconds" : 65.521812499999996,
+                "color" : {
+                    "blue" : 0,
+                    "green" : 1,
+                    "red" : 0.5
+                }
+            },
+            {
+                "seconds" : 66.323458333333335,
+                "color" : {
+                    "red" : 0,
+                    "green" : 1,
+                    "blue" : 1
+                }
+            },
+            {
+                "seconds" : 67.308145833333327,
+                "color" : {
+                    "red" : 1,
+                    "green" : 0,
+                    "blue" : 1
+                }
+            },
+            {
+                "seconds" : 67.590000000000003,
+                "color" : {
+                    "red" : 1,
+                    "green" : 0,
+                    "blue" : 1
+                }
+            },
+            {
+                "seconds" : 67.889854166666666,
+                "color" : {
+                    "red" : 1,
+                    "green" : 0,
+                    "blue" : 1
+                }
+            },
+            {
+                "seconds" : 68.141125000000002,
+                "color" : {
+                    "red" : 1,
+                    "green" : 0,
+                    "blue" : 1
+                }
+            },
+            {
+                "seconds" : 68.307083333333338,
+                "color" : {
+                    "red" : 1,
+                    "green" : 0,
+                    "blue" : 1
+                }
+            },
+            {
+                "seconds" : 68.891104166666665,
+                "color" : {
+                    "blue" : 0.5,
+                    "red" : 1,
+                    "green" : 0.5
+                }
+            },
+            {
+                "seconds" : 69.806479166666662,
+                "color" : {
+                    "blue" : 1,
+                    "green" : 0,
+                    "red" : 0
+                }
+            },
+            {
+                "seconds" : 70.691395833333331,
+                "color" : {
+                    "red" : 0,
+                    "green" : 1,
+                    "blue" : 1
+                }
+            },
+            {
+                "seconds" : 71.005354166666663,
+                "color" : {
+                    "red" : 0,
+                    "green" : 1,
+                    "blue" : 1
+                }
+            },
+            {
+                "seconds" : 71.289375000000007,
+                "color" : {
+                    "red" : 0,
+                    "green" : 1,
+                    "blue" : 1
+                }
+            },
+            {
+                "seconds" : 71.557124999999999,
+                "color" : {
+                    "red" : 0,
+                    "green" : 1,
+                    "blue" : 1
+                }
+            },
+            {
+                "seconds" : 72.49089583333334,
+                "color" : {
+                    "blue" : 1,
+                    "green" : 0,
+                    "red" : 0.5
+                }
+            }
+        ]
+    },
+    {
+        "id": "4254325",
+        "name": "Rain",
+        "difficulty": "medium",
+        "track": {
+            "resource": "Gnossienne No. 3",
+            "extension": "mp3"
+        },
+        "colorTargets": [
+            {
+                "seconds" : 4.1350625,
+                "color" : {
+                    "red" : 0.0,
+                    "green" : 1.0,
+                    "blue" : 1.0
+                }
+            },
+            {
+                "seconds" : 6.4675416666666665,
+                "color" : {
+                    "red" : 0.0,
+                    "green" : 0.0,
+                    "blue" : 1.0
+                }
+            },
+            {
+                "seconds" : 8.913833333333333,
+                "color" : {
+                    "red" : 1.0,
+                    "green" : 1.0,
+                    "blue" : 0.5
+                }
+            },
+            {
+                "seconds" : 11.5356875,
+                "color" : {
+                    "red" : 0.0,
+                    "green" : 1.0,
+                    "blue" : 1.0
+                }
+            },
+            {
+                "seconds" : 14.048041666666666,
+                "color" : {
+                    "red" : 0.5,
+                    "green" : 1.0,
+                    "blue" : 0.5
+                }
+            },
+            {
+                "seconds" : 16.347333333333335,
+                "color" : {
+                    "red" : 0.5,
+                    "green" : 0.5,
+                    "blue" : 1.0
+                }
+            },
+            {
+                "seconds" : 18.8811875,
+                "color" : {
+                    "red" : 0.0,
+                    "green" : 0.0,
+                    "blue" : 1.0
+                }
+            },
+            {
+                "seconds" : 21.167208333333335,
+                "color" : {
+                    "red" : 0.0,
+                    "green" : 0.0,
+                    "blue" : 0.5
+                }
+            },
+            {
+                "seconds" : 23.9478125,
+                "color" : {
+                    "red" : 1.0,
+                    "green" : 1.0,
+                    "blue" : 0.0
+                }
+            },
+            {
+                "seconds" : 26.346416666666666,
+                "color" : {
+                    "red" : 1.0,
+                    "green" : 1.0,
+                    "blue" : 0.5
+                }
+            },
+            {
+                "seconds" : 28.666979166666668,
+                "color" : {
+                    "red" : 0.5,
+                    "green" : 0.0,
+                    "blue" : 0.5
+                }
+            },
+            {
+                "seconds" : 30.733520833333333,
+                "color" : {
+                    "red" : 0.5,
+                    "green" : 0.0,
+                    "blue" : 0.0
+                }
+            },
+            {
+                "seconds" : 32.83508333333333,
+                "color" : {
+                    "red" : 0.0,
+                    "green" : 0.5,
+                    "blue" : 0.0
+                }
+            },
+            {
+                "seconds" : 35.41316666666667,
+                "color" : {
+                    "red" : 0.5,
+                    "green" : 0.0,
+                    "blue" : 0.0
+                }
+            },
+            {
+                "seconds" : 38.10245833333333,
+                "color" : {
+                    "red" : 0.0,
+                    "green" : 1.0,
+                    "blue" : 0.0
+                }
+            },
+            {
+                "seconds" : 41.0,
+                "color" : {
+                    "red" : 1.0,
+                    "green" : 0.5,
+                    "blue" : 0.0
+                }
+            },
+            {
+                "seconds" : 43.00120833333333,
+                "color" : {
+                    "red" : 0.0,
+                    "green" : 1.0,
+                    "blue" : 0.0
+                }
+            },
+            {
+                "seconds" : 45.33566666666667,
+                "color" : {
+                    "red" : 1.0,
+                    "green" : 0.5,
+                    "blue" : 0.5
+                }
+            },
+            {
+                "seconds" : 47.98147916666667,
+                "color" : {
+                    "red" : 1.0,
+                    "green" : 0.5,
+                    "blue" : 0.0
+                }
+            },
+            {
+                "seconds" : 50.64816666666667,
+                "color" : {
+                    "red" : 0.5,
+                    "green" : 0.5,
+                    "blue" : 1.0
+                }
+            },
+            {
+                "seconds" : 52.913916666666665,
+                "color" : {
+                    "red" : 0.5,
+                    "green" : 1.0,
+                    "blue" : 1.0
+                }
+            },
+            {
+                "seconds" : 55.200833333333335,
+                "color" : {
+                    "red" : 1.0,
+                    "green" : 1.0,
+                    "blue" : 1.0
+                }
+            },
+            {
+                "seconds" : 57.93533333333333,
+                "color" : {
+                    "red" : 0.5,
+                    "green" : 0.0,
+                    "blue" : 1.0
+                }
+            },
+            {
+                "seconds" : 59.96791666666667,
+                "color" : {
+                    "red" : 1.0,
+                    "green" : 0.0,
+                    "blue" : 0.5
+                }
+            },
+            {
+                "seconds" : 62.21270833333333,
+                "color" : {
+                    "red" : 0.0,
+                    "green" : 1.0,
+                    "blue" : 0.5
+                }
+            },
+            {
+                "seconds" : 64.31452083333333,
+                "color" : {
+                    "red" : 1.0,
+                    "green" : 0.0,
+                    "blue" : 0.0
+                }
+            },
+            {
+                "seconds" : 66.50014583333333,
+                "color" : {
+                    "red" : 1.0,
+                    "green" : 0.5,
+                    "blue" : 1.0
+                }
+            },
+            {
+                "seconds" : 69.0680625,
+                "color" : {
+                    "red" : 1.0,
+                    "green" : 0.0,
+                    "blue" : 1.0
+                }
+            },
+            {
+                "seconds" : 71.61439583333333,
+                "color" : {
+                    "red" : 0.5,
+                    "green" : 0.5,
+                    "blue" : 0.5
+                }
+            },
+            {
+                "seconds" : 74.18041666666667,
+                "color" : {
+                    "red" : 1.0,
+                    "green" : 0.0,
+                    "blue" : 0.5
+                }
+            },
+            {
+                "seconds" : 76.37983333333334,
+                "color" : {
+                    "red" : 1.0,
+                    "green" : 0.0,
+                    "blue" : 0.5
+                }
+            },
+            {
+                "seconds" : 78.44860416666667,
+                "color" : {
+                    "red" : 0.0,
+                    "green" : 0.5,
+                    "blue" : 0.5
+                }
+            },
+            {
+                "seconds" : 80.7343125,
+                "color" : {
+                    "red" : 0.5,
+                    "green" : 0.5,
+                    "blue" : 1.0
+                }
+            },
+            {
+                "seconds" : 83.33570833333333,
+                "color" : {
+                    "red" : 0.5,
+                    "green" : 0.5,
+                    "blue" : 1.0
+                }
+            },
+            {
+                "seconds" : 85.73454166666667,
+                "color" : {
+                    "red" : 1.0,
+                    "green" : 0.5,
+                    "blue" : 0.5
+                }
+            },
+            {
+                "seconds" : 88.51525,
+                "color" : {
+                    "red" : 0.0,
+                    "green" : 1.0,
+                    "blue" : 1.0
+                }
+            },
+            {
+                "seconds" : 90.9008125,
+                "color" : {
+                    "red" : 0.0,
+                    "green" : 0.5,
+                    "blue" : 1.0
+                }
+            },
+            {
+                "seconds" : 93.60008333333333,
+                "color" : {
+                    "red" : 1.0,
+                    "green" : 0.5,
+                    "blue" : 0.5
+                }
+            },
+            {
+                "seconds" : 95.46804166666666,
+                "color" : {
+                    "red" : 0.5,
+                    "green" : 0.0,
+                    "blue" : 1.0
+                }
+            },
+            {
+                "seconds" : 97.86608333333334,
+                "color" : {
+                    "red" : 1.0,
+                    "green" : 1.0,
+                    "blue" : 0.0
+                }
+            },
+            {
+                "seconds" : 100.33516666666667,
+                "color" : {
+                    "red" : 1.0,
+                    "green" : 0.0,
+                    "blue" : 0.5
+                }
+            },
+            {
+                "seconds" : 102.46733333333333,
+                "color" : {
+                    "red" : 0.5,
+                    "green" : 1.0,
+                    "blue" : 0.5
+                }
+            },
+            {
+                "seconds" : 104.4815,
+                "color" : {
+                    "red" : 1.0,
+                    "green" : 0.0,
+                    "blue" : 0.5
+                }
+            },
+            {
+                "seconds" : 106.80277083333333,
+                "color" : {
+                    "red" : 0.0,
+                    "green" : 0.0,
+                    "blue" : 1.0
+                }
+            },
+            {
+                "seconds" : 109.3013125,
+                "color" : {
+                    "red" : 0.0,
+                    "green" : 1.0,
+                    "blue" : 0.5
+                }
+            },
+            {
+                "seconds" : 111.71410416666667,
+                "color" : {
+                    "red" : 0.5,
+                    "green" : 0.0,
+                    "blue" : 0.0
+                }
+            },
+            {
+                "seconds" : 114.149625,
+                "color" : {
+                    "red" : 1.0,
+                    "green" : 1.0,
+                    "blue" : 0.0
+                }
+            },
+            {
+                "seconds" : 116.36739583333333,
+                "color" : {
+                    "red" : 1.0,
+                    "green" : 1.0,
+                    "blue" : 0.5
+                }
+            },
+            {
+                "seconds" : 119.0355,
+                "color" : {
+                    "red" : 0.5,
+                    "green" : 1.0,
+                    "blue" : 0.5
+                }
+            },
+            {
+                "seconds" : 121.60102083333334,
+                "color" : {
+                    "red" : 1.0,
+                    "green" : 0.0,
+                    "blue" : 0.5
+                }
+            },
+            {
+                "seconds" : 123.9476875,
+                "color" : {
+                    "red" : 0.0,
+                    "green" : 0.0,
+                    "blue" : 0.5
+                }
+            },
+            {
+                "seconds" : 126.90195833333334,
+                "color" : {
+                    "red" : 0.5,
+                    "green" : 0.0,
+                    "blue" : 0.0
+                }
+            },
+            {
+                "seconds" : 133.7494375,
+                "color" : {
+                    "red" : 0.0,
+                    "green" : 0.0,
+                    "blue" : 0.0
+                }
+            }
+        ]
+    },
+    {
+        "id": "65436543",
+        "name": "?",
+        "difficulty": "easy",
+        "track": {
+            "resource": "C418 - Wet Hands",
+            "extension": "mp3"
+        },
+        "colorTargets": [
+            {
+              "seconds" : 4.568479166666667,
+              "color" : {
+                "red" : 0.0,
+                "green" : 1.0,
+                "blue" : 0.0
+              }
+            },
+            {
+              "seconds" : 7.771041666666667,
+              "color" : {
+                "red" : 0.0,
+                "green" : 0.5,
+                "blue" : 1.0
+              }
+            },
+            {
+              "seconds" : 11.0381875,
+              "color" : {
+                "red" : 1.0,
+                "green" : 0.0,
+                "blue" : 0.0
+              }
+            },
+            {
+              "seconds" : 14.337979166666667,
+              "color" : {
+                "red" : 0.5,
+                "green" : 1.0,
+                "blue" : 0.5
+              }
+            },
+            {
+              "seconds" : 17.5025625,
+              "color" : {
+                "red" : 0.5,
+                "green" : 0.0,
+                "blue" : 0.5
+              }
+            },
+            {
+              "seconds" : 20.821958333333335,
+              "color" : {
+                "red" : 0.0,
+                "green" : 1.0,
+                "blue" : 1.0
+              }
+            },
+            {
+              "seconds" : 24.070208333333333,
+              "color" : {
+                "red" : 1.0,
+                "green" : 0.0,
+                "blue" : 0.0
+              }
+            },
+            {
+              "seconds" : 27.337104166666666,
+              "color" : {
+                "red" : 0.0,
+                "green" : 0.0,
+                "blue" : 0.0
+              }
+            },
+            {
+              "seconds" : 30.5900625,
+              "color" : {
+                "red" : 1.0,
+                "green" : 0.0,
+                "blue" : 1.0
+              }
+            },
+            {
+              "seconds" : 33.75541666666667,
+              "color" : {
+                "red" : 1.0,
+                "green" : 1.0,
+                "blue" : 0.5
+              }
+            },
+            {
+              "seconds" : 37.07127083333334,
+              "color" : {
+                "red" : 1.0,
+                "green" : 0.5,
+                "blue" : 0.0
+              }
+            },
+            {
+              "seconds" : 40.2715,
+              "color" : {
+                "red" : 0.5,
+                "green" : 0.0,
+                "blue" : 1.0
+              }
+            },
+            {
+              "seconds" : 43.62404166666666,
+              "color" : {
+                "red" : 0.0,
+                "green" : 0.0,
+                "blue" : 1.0
+              }
+            },
+            {
+              "seconds" : 48.571625,
+              "color" : {
+                "red" : 0.0,
+                "green" : 0.5,
+                "blue" : 1.0
+              }
+            },
+            {
+              "seconds" : 51.8546875,
+              "color" : {
+                "red" : 0.0,
+                "green" : 0.0,
+                "blue" : 0.5
+              }
+            },
+            {
+              "seconds" : 54.955125,
+              "color" : {
+                "red" : 0.5,
+                "green" : 0.0,
+                "blue" : 0.0
+              }
+            },
+            {
+              "seconds" : 58.12139583333333,
+              "color" : {
+                "red" : 0.5,
+                "green" : 1.0,
+                "blue" : 1.0
+              }
+            },
+            {
+              "seconds" : 61.486020833333335,
+              "color" : {
+                "red" : 0.5,
+                "green" : 0.5,
+                "blue" : 0.0
+              }
+            },
+            {
+              "seconds" : 64.69041666666666,
+              "color" : {
+                "red" : 0.0,
+                "green" : 0.0,
+                "blue" : 0.0
+              }
+            },
+            {
+              "seconds" : 67.9203125,
+              "color" : {
+                "red" : 1.0,
+                "green" : 1.0,
+                "blue" : 1.0
+              }
+            },
+            {
+              "seconds" : 71.20552083333334,
+              "color" : {
+                "red" : 0.5,
+                "green" : 0.0,
+                "blue" : 0.0
+              }
+            },
+            {
+              "seconds" : 74.45797916666666,
+              "color" : {
+                "red" : 0.5,
+                "green" : 0.0,
+                "blue" : 0.5
+              }
+            },
+            {
+              "seconds" : 77.78854166666666,
+              "color" : {
+                "red" : 0.5,
+                "green" : 0.5,
+                "blue" : 1.0
+              }
+            },
+
         ]
     }
 ]

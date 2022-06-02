@@ -96,10 +96,6 @@ class GameScene: SKScene {
         self.player.prepareToPlay()
         self.player.delegate = self
         
-        guard !level.colorTargets.isEmpty else {
-            return false
-        }
-        
         return true
     }
     
@@ -204,8 +200,18 @@ extension GameScene {
             if touchedNodes.contains(blueNodeContainer) {
                 blueSliderNode.position.y = touch.location(in: blueNode).y.cappedBy(-blueNode.frame.size.height/2, blueNode.frame.size.height/2)
             }
-            if touchedNodes.contains(developerRecordContainer) {
-                print(player.currentTime)
+            if touchedNodes.contains(developerRecordContainer) && touch.phase == .began {
+                let possibleValues = [0.0, 0.5, 1.0]
+                print("""
+                            {
+                              "seconds" : \(player.currentTime),
+                              "color" : {
+                                "red" : \(possibleValues[Int.random(in: 0..<possibleValues.count)]),
+                                "green" : \(possibleValues[Int.random(in: 0..<possibleValues.count)]),
+                                "blue" : \(possibleValues[Int.random(in: 0..<possibleValues.count)])
+                              }
+                            },
+                """)
             }
         }
     }
@@ -220,7 +226,9 @@ extension GameScene {
         player.play()
         
         currentScore = 0
-        currentIndex = 0
+        if !level.colorTargets.isEmpty {
+            currentIndex = 0
+        }
         
         animateColorToMatchNode()
     }
@@ -265,9 +273,9 @@ extension GameScene {
                 .sequence([
                     .wait(forDuration: totalDuration),
                     .group([
-                        .scaleX(to: size.width / 200, duration: 0.5),
-                        .scaleY(to: size.height / 200, duration: 0.5),
-                        .fadeOut(withDuration: 0.5)
+                        .scaleX(to: size.width / 200, duration: 0.2),
+                        .scaleY(to: size.height / 200, duration: 0.2),
+                        .fadeOut(withDuration: 0.2)
                     ]),
                     .removeFromParent()
                 ])
