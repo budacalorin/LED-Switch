@@ -284,7 +284,9 @@ extension GameScene {
             return false
         }
         let currentColor = getCurrentSelectedColor()
-        return colorToMatch.distance(to: currentColor) < 40
+        
+        let distance = colorToMatch.distance(to: currentColor)
+        return distance < 49
     }
     
     private func getCurrentSelectedColor() -> UIColor {
@@ -293,7 +295,7 @@ extension GameScene {
         let blueColorQuantity = getYPercentage(parent: blueNode, slider: blueSliderNode)
         let alpha = getAlphaFor(red: redColorQuantity, green: greenColorQuantity, blue: blueColorQuantity)
         
-        return UIColor(displayP3Red: redColorQuantity, green: greenColorQuantity, blue: blueColorQuantity, alpha: alpha)
+        return UIColor(red: redColorQuantity, green: greenColorQuantity, blue: blueColorQuantity, alpha: alpha)
     }
 }
 

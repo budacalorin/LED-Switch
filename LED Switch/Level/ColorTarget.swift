@@ -29,7 +29,7 @@ class ColorTarget: Decodable {
         let blue = color["blue"] ?? 0
         
         self.seconds = seconds
-        self.color = UIColor(displayP3Red: red, green: green, blue: blue, alpha: 1)
+        self.color = UIColor(red: red, green: green, blue: blue, alpha: 1)
     }
     
     private enum CodingKeys: CodingKey {
