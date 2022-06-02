@@ -11,6 +11,7 @@ class LevelCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var difficultyLabel: UILabel!
     @IBOutlet weak var trackLabel: UILabel!
+    @IBOutlet weak var highScoreLabel: UILabel!
     
     var level: Level?
     
@@ -20,6 +21,11 @@ class LevelCollectionViewCell: UICollectionViewCell {
         difficultyLabel.text = level.difficulty.rawValue
         trackLabel.text = level.track.resource
         contentView.backgroundColor = color
+        let highScore = HighScoreManager.shared.highScore(forLevel: level.id)
+        highScoreLabel.isHidden = highScore == 0
+        if highScore > 0 {
+            highScoreLabel.text = "High Score: \(highScore)"
+        }
     }
     
     override func layoutSubviews() {

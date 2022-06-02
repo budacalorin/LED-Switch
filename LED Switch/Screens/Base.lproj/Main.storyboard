@@ -33,7 +33,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Ah8-Rh-NjJ">
-                                            <rect key="frame" x="24" y="71.5" width="88.5" height="74.5"/>
+                                            <rect key="frame" x="24" y="43" width="88.5" height="103"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="hps-nu-uLR">
                                                     <rect key="frame" x="0.0" y="0.0" width="88.5" height="46"/>
@@ -41,13 +41,11 @@
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9dG-nN-yYv">
                                                             <rect key="frame" x="0.0" y="0.0" width="88.5" height="30"/>
                                                             <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
-                                                            <color key="textColor" systemColor="systemBackgroundColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dificulty" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SxI-Ys-Gdb" userLabel="Difficulty Label">
                                                             <rect key="frame" x="0.0" y="30" width="88.5" height="16"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                            <color key="textColor" systemColor="systemBackgroundColor"/>
                                                             <color key="highlightedColor" systemColor="secondaryLabelColor"/>
                                                         </label>
                                                     </subviews>
@@ -55,7 +53,11 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Track name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kXQ-Dn-g3T" userLabel="Track Label">
                                                     <rect key="frame" x="0.0" y="54" width="88.5" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" systemColor="systemBackgroundColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aqp-cP-ntw" userLabel="HighScore Label">
+                                                    <rect key="frame" x="0.0" y="82.5" width="88.5" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -73,6 +75,7 @@
                                 <size key="customSize" width="170" height="170"/>
                                 <connections>
                                     <outlet property="difficultyLabel" destination="SxI-Ys-Gdb" id="Pg8-Fa-5yO"/>
+                                    <outlet property="highScoreLabel" destination="aqp-cP-ntw" id="gh0-c3-AoH"/>
                                     <outlet property="titleLabel" destination="9dG-nN-yYv" id="yI0-7L-B3c"/>
                                     <outlet property="trackLabel" destination="kXQ-Dn-g3T" id="fyD-a9-Ohc"/>
                                     <segue destination="BV1-FR-VrT" kind="presentation" modalPresentationStyle="fullScreen" id="Kuj-Tm-V7N"/>

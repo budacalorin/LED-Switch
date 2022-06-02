@@ -37,6 +37,8 @@ class GameScene: SKScene {
     private var developerRecordContainer: SKSpriteNode!
     private var matchContainerNode: SKShapeNode!
     private var pauseLabel: SKLabelNode!
+    private var pauseHighScoreLabel: SKLabelNode!
+    private var startHighScoreLabel: SKLabelNode!
     
     let dismiss = PassthroughSubject<Void, Never>()
     
@@ -78,6 +80,8 @@ class GameScene: SKScene {
         pauseOverlayNode = childNode(withName: "//PauseOverlayNode")!
         matchContainerNode = (childNode(withName: "//MatchContainerNode") as! SKShapeNode)
         pauseLabel = (childNode(withName: "//PauseLabel") as! SKLabelNode)
+        pauseHighScoreLabel = (childNode(withName: "//PauseHighScoreLabel") as! SKLabelNode)
+        startHighScoreLabel = (childNode(withName: "//StartHighScoreLabel") as! SKLabelNode)
         
         matchContainerNode.path = UIBezierPath(
             roundedRect: CGRect(
@@ -102,6 +106,8 @@ class GameScene: SKScene {
         
         startOverlayNode.isHidden = false
         pauseOverlayNode.isHidden = true
+        
+        refreshHighScore()
     }
     
     func configure(level: Level) -> Bool {
@@ -131,6 +137,13 @@ class GameScene: SKScene {
                 increaseIndex()
             }
         }
+    }
+    
+    private func refreshHighScore() {
+        let highScore = "High Score: \(HighScoreManager.shared.highScore(forLevel: level.id))"
+        
+        pauseHighScoreLabel.text = highScore
+        startHighScoreLabel.text = highScore
     }
 }
 
@@ -366,6 +379,10 @@ extension GameScene {
 // MARK: AVAudioPlayerDelegate
 extension GameScene: AVAudioPlayerDelegate {
     func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
+        if currentScore > HighScoreManager.shared.highScore(forLevel: level.id) {
+            HighScoreManager.shared.setHighScore(forLevel: level.id, newScore: currentScore)
+            refreshHighScore()
+        }
         stop()
     }
 }

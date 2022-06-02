@@ -19,6 +19,7 @@
 		054B73532849565E00FD7154 /* He is a Pirate.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 054B73522849565E00FD7154 /* He is a Pirate.mp3 */; };
 		054B735528495DAB00FD7154 /* C418 - Wet Hands.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 054B735428495DAB00FD7154 /* C418 - Wet Hands.mp3 */; };
 		054B735728495E5B00FD7154 /* Gnossienne No. 3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 054B735628495E5B00FD7154 /* Gnossienne No. 3.mp3 */; };
+		054B735D28496F6000FD7154 /* HighScoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054B735C28496F6000FD7154 /* HighScoreManager.swift */; };
 		055F96CE28477CD600A22CD0 /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055F96CD28477CD600A22CD0 /* Level.swift */; };
 		055F96D028477CFC00A22CD0 /* Difficulty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055F96CF28477CFC00A22CD0 /* Difficulty.swift */; };
 		055F96D228477E2900A22CD0 /* ColorTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055F96D128477E2900A22CD0 /* ColorTarget.swift */; };
@@ -44,6 +45,7 @@
 		054B73522849565E00FD7154 /* He is a Pirate.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "He is a Pirate.mp3"; sourceTree = "<group>"; };
 		054B735428495DAB00FD7154 /* C418 - Wet Hands.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "C418 - Wet Hands.mp3"; sourceTree = "<group>"; };
 		054B735628495E5B00FD7154 /* Gnossienne No. 3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Gnossienne No. 3.mp3"; sourceTree = "<group>"; };
+		054B735C28496F6000FD7154 /* HighScoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighScoreManager.swift; sourceTree = "<group>"; };
 		055F96CD28477CD600A22CD0 /* Level.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level.swift; sourceTree = "<group>"; };
 		055F96CF28477CFC00A22CD0 /* Difficulty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Difficulty.swift; sourceTree = "<group>"; };
 		055F96D128477E2900A22CD0 /* ColorTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorTarget.swift; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 		0529BED5280477E200A95912 /* LED Switch */ = {
 			isa = PBXGroup;
 			children = (
+				054B735B28496F5500FD7154 /* HighScore */,
 				055F96E22847A26800A22CD0 /* Data */,
 				055F96DE2847962200A22CD0 /* Screens */,
 				055F96D32847809900A22CD0 /* Utils */,
@@ -94,6 +97,14 @@
 				0529BEE3280477E400A95912 /* Assets.xcassets */,
 			);
 			path = "LED Switch";
+			sourceTree = "<group>";
+		};
+		054B735B28496F5500FD7154 /* HighScore */ = {
+			isa = PBXGroup;
+			children = (
+				054B735C28496F6000FD7154 /* HighScoreManager.swift */,
+			);
+			path = HighScore;
 			sourceTree = "<group>";
 		};
 		055F96CC28477CB000A22CD0 /* Level */ = {
@@ -254,6 +265,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0529BEDD280477E200A95912 /* GameScene.swift in Sources */,
+				054B735D28496F6000FD7154 /* HighScoreManager.swift in Sources */,
 				0529BEDF280477E200A95912 /* GameViewController.swift in Sources */,
 				055F96D228477E2900A22CD0 /* ColorTarget.swift in Sources */,
 				055F96D72847815600A22CD0 /* Track.swift in Sources */,

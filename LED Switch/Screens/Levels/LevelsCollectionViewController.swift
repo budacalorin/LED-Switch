@@ -20,53 +20,6 @@ class LevelsCollectionViewController: UICollectionViewController {
     }
     
     private func loadLevels() {
-//        levels = [
-//            Level(
-//                name: "Tutorial",
-//                difficulty: .easy,
-//                track: Track(
-//                    resource: "C418 - Minecraft",
-//                    extension: .mp3
-//                ),
-//                colorTargets: [
-//                    ColorTarget(seconds: 100, color: UIColor.orange)
-//                ]
-//            ),
-//            Level(
-//                name: "Tutorial",
-//                difficulty: .easy,
-//                track: Track(
-//                    resource: "C418 - Minecraft",
-//                    extension: .mp3
-//                ),
-//                colorTargets: [
-//                    ColorTarget(seconds: 100, color: UIColor.orange)
-//                ]
-//            ),
-//            Level(
-//                name: "Tutorial",
-//                difficulty: .easy,
-//                track: Track(
-//                    resource: "C418 - Minecraft",
-//                    extension: .mp3
-//                ),
-//                colorTargets: [
-//                    ColorTarget(seconds: 100, color: UIColor.orange)
-//                ]
-//            ),
-//            Level(
-//                name: "Tutorial",
-//                difficulty: .easy,
-//                track: Track(
-//                    resource: "C418 - Minecraft",
-//                    extension: .mp3
-//                ),
-//                colorTargets: [
-//                    ColorTarget(seconds: 100, color: UIColor.orange)
-//                ]
-//            )
-//        ]
-        
         do {
             guard let url = Bundle.main.url(forResource: "Levels", withExtension: "json") else {
                 print("Could not get levels bundle url")
@@ -113,36 +66,4 @@ class LevelsCollectionViewController: UICollectionViewController {
         
         return cell
     }
-    
-    // MARK: UICollectionViewDelegate
-    
-    /*
-     // Uncomment this method to specify if the specified item should be highlighted during tracking
-     override func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool {
-     return true
-    }
-    */
-
-    /*
-    // Uncomment this method to specify if the specified item should be selected
-    override func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-    */
-
-    /*
-    // Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
-    override func collectionView(_ collectionView: UICollectionView, shouldShowMenuForItemAt indexPath: IndexPath) -> Bool {
-        return false
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, canPerformAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) -> Bool {
-        return false
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, performAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) {
-    
-    }
-    */
-
 }
