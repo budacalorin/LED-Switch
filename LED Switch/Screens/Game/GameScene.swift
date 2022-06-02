@@ -28,6 +28,7 @@ class GameScene: SKScene {
     private var backgroundNode: SKSpriteNode!
     private var startGameContainerNode: SKShapeNode!
     private var resumeGameContainerNode: SKShapeNode!
+    private var restartGameContainerNode: SKShapeNode!
     private var quitGameContainerNode: SKShapeNode!
     private var startOverlayNode: SKNode!
     private var pauseOverlayNode: SKNode!
@@ -68,6 +69,7 @@ class GameScene: SKScene {
         backgroundNode = (childNode(withName: "//BackgroundNode") as! SKSpriteNode)
         startGameContainerNode = (childNode(withName: "//StartGameContainer") as! SKShapeNode)
         resumeGameContainerNode = (childNode(withName: "//ResumeGameContainer") as! SKShapeNode)
+        restartGameContainerNode = (childNode(withName: "//RestartGameContainer") as! SKShapeNode)
         quitGameContainerNode = (childNode(withName: "//QuitGameContainer") as! SKShapeNode)
         currentScoreLabel = (childNode(withName: "//CurrentScoreLabel") as! SKLabelNode)
         remainingTimeLabel = (childNode(withName: "//RemainingTimeLabel") as! SKLabelNode)
@@ -94,10 +96,12 @@ class GameScene: SKScene {
         [
             (startGameContainerNode, 200),
             (quitGameContainerNode, 180),
-            (resumeGameContainerNode, 350)
+            (resumeGameContainerNode, 350),
+            (restartGameContainerNode, 330)
         ].forEach(applyRoundedShape(toOption:width:))
         
         startOverlayNode.isHidden = false
+        pauseOverlayNode.isHidden = true
     }
     
     func configure(level: Level) -> Bool {
@@ -181,6 +185,9 @@ extension GameScene {
             if touchedNodes.contains(quitGameContainerNode) {
                 quitGame()
             }
+            if touchedNodes.contains(restartGameContainerNode) {
+                start()
+            }
             guard !touchedNodes.contains(where: { $0 == startOverlayNode || $0 == pauseOverlayNode}) else {
                 return
             }
@@ -220,6 +227,7 @@ extension GameScene {
         startOverlayNode.isHidden = true
         pauseOverlayNode.isHidden = true
         
+        player.currentTime = 0
         player.play()
         
         currentScore = 0
