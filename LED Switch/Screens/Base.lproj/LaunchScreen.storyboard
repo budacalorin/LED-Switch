@@ -15,18 +15,54 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Scg-NL-sBS" userLabel="Blue">
+                                <rect key="frame" x="306" y="0.0" width="108" height="896"/>
+                                <color key="backgroundColor" systemColor="systemCyanColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZPh-qo-Bbm" userLabel="Red">
+                                <rect key="frame" x="0.0" y="0.0" width="306" height="896"/>
+                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="306" id="enO-Pa-jU4"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LED Switch" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oD0-tQ-crw">
+                                <rect key="frame" x="79" y="579.5" width="256.5" height="57"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="48"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="ZPh-qo-Bbm" secondAttribute="bottom" id="BhN-VY-12F"/>
+                            <constraint firstItem="Scg-NL-sBS" firstAttribute="leading" secondItem="ZPh-qo-Bbm" secondAttribute="trailing" id="JDd-XY-y7a"/>
+                            <constraint firstAttribute="trailing" secondItem="Scg-NL-sBS" secondAttribute="trailing" id="OL8-tD-a25"/>
+                            <constraint firstItem="ZPh-qo-Bbm" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="ZZc-Dz-UuH"/>
+                            <constraint firstItem="ZPh-qo-Bbm" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="e0G-H9-kE1"/>
+                            <constraint firstItem="oD0-tQ-crw" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="rgp-qw-0qa"/>
+                            <constraint firstAttribute="bottom" secondItem="Scg-NL-sBS" secondAttribute="bottom" id="yYd-eq-MUB"/>
+                            <constraint firstItem="oD0-tQ-crw" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" constant="160" id="yZO-MU-6NU"/>
+                            <constraint firstItem="Scg-NL-sBS" firstAttribute="top" secondItem="ZPh-qo-Bbm" secondAttribute="top" id="zWC-Gv-9Yb"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="52.173913043478265" y="375"/>
         </scene>
     </scenes>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemCyanColor">
+            <color red="0.19607843137254902" green="0.67843137254901964" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

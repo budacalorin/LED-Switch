@@ -12,17 +12,18 @@ class LevelCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var difficultyLabel: UILabel!
     @IBOutlet weak var trackLabel: UILabel!
     @IBOutlet weak var highScoreLabel: UILabel!
+    @IBOutlet weak var imageView: UIImageView!
     
     var level: Level?
     
-    func configure(level: Level, color: UIColor) {
+    func configure(level: Level) {
         self.level = level
         titleLabel.text = level.name
         difficultyLabel.text = level.difficulty.rawValue
         trackLabel.text = level.track.resource
-        contentView.backgroundColor = color
         let highScore = HighScoreManager.shared.highScore(forLevel: level.id)
         highScoreLabel.isHidden = highScore == 0
+        imageView.image = UIImage(named: level.image)
         if highScore > 0 {
             highScoreLabel.text = "High Score: \(highScore)"
         }
@@ -30,6 +31,6 @@ class LevelCollectionViewCell: UICollectionViewCell {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        layer.cornerRadius = 20
+        imageView.layer.cornerRadius = 20
     }
 }

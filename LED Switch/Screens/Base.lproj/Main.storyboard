@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Kac-g9-1m5">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="f66-Bg-gyp">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Levels Collection View Controller-->
+        <!--LED Switch-->
         <scene sceneID="1jN-ff-GC9">
             <objects>
                 <collectionViewController storyboardIdentifier="LevelsCollectionViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Kac-g9-1m5" customClass="LevelsCollectionViewController" customModule="LED_Switch" customModuleProvider="target" sceneMemberID="viewController">
@@ -18,8 +18,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="qkU-Do-JQy">
-                            <size key="itemSize" width="170" height="170"/>
-                            <size key="estimatedItemSize" width="170" height="170"/>
+                            <size key="itemSize" width="150" height="150"/>
+                            <size key="estimatedItemSize" width="150" height="150"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="8" minY="8" maxX="8" maxY="8"/>
@@ -32,8 +32,15 @@
                                     <rect key="frame" x="0.0" y="0.0" width="170" height="170"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XGD-26-KSB">
+                                            <rect key="frame" x="10" y="10" width="150" height="150"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="150" id="YUn-Lo-5LI" userLabel="height = 150"/>
+                                                <constraint firstAttribute="width" constant="150" id="a9F-f6-PBq"/>
+                                            </constraints>
+                                        </imageView>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Ah8-Rh-NjJ">
-                                            <rect key="frame" x="24" y="43" width="88.5" height="103"/>
+                                            <rect key="frame" x="24" y="59" width="88.5" height="103"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="hps-nu-uLR">
                                                     <rect key="frame" x="0.0" y="0.0" width="88.5" height="46"/>
@@ -41,34 +48,40 @@
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9dG-nN-yYv">
                                                             <rect key="frame" x="0.0" y="0.0" width="88.5" height="30"/>
                                                             <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
-                                                            <nil key="highlightedColor"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dificulty" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SxI-Ys-Gdb" userLabel="Difficulty Label">
                                                             <rect key="frame" x="0.0" y="30" width="88.5" height="16"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                            <color key="highlightedColor" systemColor="secondaryLabelColor"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </label>
                                                     </subviews>
                                                 </stackView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Track name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kXQ-Dn-g3T" userLabel="Track Label">
                                                     <rect key="frame" x="0.0" y="54" width="88.5" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="highlightedColor"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aqp-cP-ntw" userLabel="HighScore Label">
                                                     <rect key="frame" x="0.0" y="82.5" width="88.5" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="highlightedColor"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </label>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </stackView>
                                     </subviews>
-                                    <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstItem="Ah8-Rh-NjJ" firstAttribute="leading" secondItem="oSh-aj-hjo" secondAttribute="leading" constant="24" id="9TC-MK-mRR"/>
+                                        <constraint firstItem="XGD-26-KSB" firstAttribute="centerX" secondItem="oSh-aj-hjo" secondAttribute="centerX" id="EwR-Ix-jAI"/>
                                         <constraint firstItem="Ah8-Rh-NjJ" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="oSh-aj-hjo" secondAttribute="trailing" constant="-24" id="Hki-98-g7C"/>
-                                        <constraint firstItem="Ah8-Rh-NjJ" firstAttribute="bottom" secondItem="oSh-aj-hjo" secondAttribute="bottom" constant="-24" id="PMT-5T-iA4"/>
+                                        <constraint firstItem="XGD-26-KSB" firstAttribute="centerY" secondItem="oSh-aj-hjo" secondAttribute="centerY" id="Jp0-8G-Hk6"/>
+                                        <constraint firstItem="Ah8-Rh-NjJ" firstAttribute="bottom" secondItem="oSh-aj-hjo" secondAttribute="bottom" constant="-8" id="PMT-5T-iA4"/>
                                         <constraint firstItem="Ah8-Rh-NjJ" firstAttribute="top" relation="greaterThanOrEqual" secondItem="oSh-aj-hjo" secondAttribute="top" constant="24" id="a7q-BM-j1f"/>
                                     </constraints>
                                 </collectionViewCellContentView>
@@ -76,6 +89,7 @@
                                 <connections>
                                     <outlet property="difficultyLabel" destination="SxI-Ys-Gdb" id="Pg8-Fa-5yO"/>
                                     <outlet property="highScoreLabel" destination="aqp-cP-ntw" id="gh0-c3-AoH"/>
+                                    <outlet property="imageView" destination="XGD-26-KSB" id="ViA-xh-yqr"/>
                                     <outlet property="titleLabel" destination="9dG-nN-yYv" id="yI0-7L-B3c"/>
                                     <outlet property="trackLabel" destination="kXQ-Dn-g3T" id="fyD-a9-Ohc"/>
                                     <segue destination="BV1-FR-VrT" kind="presentation" modalPresentationStyle="fullScreen" id="Kuj-Tm-V7N"/>
@@ -87,10 +101,11 @@
                             <outlet property="delegate" destination="Kac-g9-1m5" id="qGW-9d-q7z"/>
                         </connections>
                     </collectionView>
+                    <navigationItem key="navigationItem" title="LED Switch" id="QQJ-Db-equ"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YNZ-7g-K1e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-242" y="-567"/>
+            <point key="canvasLocation" x="668.11594202898561" y="-567.1875"/>
         </scene>
         <!--Game View Controller-->
         <scene sceneID="tXr-a1-R10">
@@ -106,18 +121,30 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="519" y="-567"/>
+            <point key="canvasLocation" x="1428.985507246377" y="-567.1875"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="5pu-5A-eKg">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="f66-Bg-gyp" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="8uU-Xy-WG2">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Kac-g9-1m5" kind="relationship" relationship="rootViewController" id="Ou4-qA-jly"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bJm-SQ-i6o" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-242.0289855072464" y="-567.1875"/>
         </scene>
     </scenes>
     <resources>
-        <systemColor name="secondaryLabelColor">
-            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemOrangeColor">
-            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

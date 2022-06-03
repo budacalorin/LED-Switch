@@ -62,7 +62,7 @@ class LevelsCollectionViewController: UICollectionViewController {
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! LevelCollectionViewCell
         
-        cell.configure(level: levels[indexPath.row], color: .orange)
+        cell.configure(level: levels[indexPath.row])
         
         return cell
     }

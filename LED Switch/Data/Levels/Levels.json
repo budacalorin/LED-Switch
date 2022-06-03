@@ -3,6 +3,7 @@
         "id": "12345",
         "name": "Tutorial",
         "difficulty": "easy",
+        "image": "Minecraft",
         "track": {
             "resource": "C418 - Minecraft",
             "extension": "mp3"
@@ -430,6 +431,7 @@
         "id": "3545243",
         "name": "Passion",
         "difficulty": "medium",
+        "image": "Paradise Again",
         "track": {
             "resource": "Mafia - For You",
             "extension": "mp3"
@@ -1433,6 +1435,7 @@
         "id": "30985670",
         "name": "Aye",
         "difficulty": "hard",
+        "image": "He is a Pirate",
         "track": {
             "resource": "He is a Pirate",
             "extension": "mp3"
@@ -2060,6 +2063,7 @@
         "id": "4254325",
         "name": "Rain",
         "difficulty": "medium",
+        "image": "Erik Satie",
         "track": {
             "resource": "Gnossienne No. 3",
             "extension": "mp3"
@@ -2495,6 +2499,7 @@
         "id": "65436543",
         "name": "?",
         "difficulty": "easy",
+        "image": "Minecraft",
         "track": {
             "resource": "C418 - Wet Hands",
             "extension": "mp3"
